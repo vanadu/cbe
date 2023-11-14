@@ -1,8 +1,9 @@
 // From https://www.codementor.io/@giorgiasambrotta/hamburger-menu-with-react-and-tailwind-css-1qx6sruvua
 import { useState } from 'react'
 import Link from 'next/link'
-import { HiMenuAlt3 } from 'react-icons/hi'
-
+import Image from 'next/image'
+import CBELogo from '../../public/images/img-cbe-logo-400.png'
+import MobileMenuArrow from '../../public/images/img-mobile-menu-arrow.svg'
 import * as styles from '../styles/Header.module.scss'
 
 
@@ -17,9 +18,23 @@ export default function Header() {
           <div
             className={styles.mobile_menu_icon}
             onClick={() => setIsNavOpen((prev) => !prev)}>
-            <span className='menu-icon'>
-              <HiMenuAlt3 />
-            </span>
+            <Image 
+              src={CBELogo} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              // style={{ width: '100%', height: '100%' }}
+              className={styles.mobile_menu_logo} alt="Crossroads Blues Experience" 
+            />
+            <div className={styles.mobile_menu_arrow}>
+              <Image 
+                src={MobileMenuArrow}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className={styles.mobile_menu_arrow_svg}
+                alt=""/>
+            </div>
           </div>
 
           <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
@@ -73,29 +88,29 @@ export default function Header() {
             <li className={styles.desktop_menu_list_item}>
               <Link
                 href='/'
-                className='menu-link'>
-                HOME
+                className={styles.nav_link}>
+                home
               </Link>
             </li>
             <li className={styles.desktop_menu_list_item}>
               <Link
                 href='/program'
-                className='menu-link'>
-                PROGRAM
+                className={styles.nav_link}>
+                program
               </Link>
             </li>
             <li className={styles.desktop_menu_list_item}>
               <Link
                 href='/about'
-                className='menu-link'>
-                ABOUT
+                className={styles.nav_link}>
+                about
               </Link>
             </li>
             <li className={styles.desktop_menu_list_item}>
               <Link
                 href='/contact'
-                className='menu-link'>
-                CONTACT
+                className={styles.nav_link}>
+                contact
               </Link>
             </li>
           </ul>

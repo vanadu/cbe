@@ -7,64 +7,137 @@
 // !VA Header 
 .header {
   @include mphone {
-  
+    height: 110px;
   }
   @include lphone {
-  
+    height: 116px;
   }
   @include tablet {
-  
+    height: 140px;
   }
   @include desktop {
-  
+    height: 160px;
   }
   @include ldesktop {
-  
+    height: 200px;
   }
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  height: 100px;
   z-index: 10;
-  // background: rgba(255, 0, 0, .3) !important; //devred
   background-color: #dceaec;
 }
 
-.logo {
+.top_bar {
+  @include tablet {
+    justify-content: space-between;
+  }
+  @include desktop {
+    justify-content: space-between;
+  }
+  @include ldesktop {
+    justify-content: space-between;
+  }
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+
+}
+
+.branding_mobile_link {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include ldesktop {
+    display: none;
+  }
+  display: block;
+}
+
+.branding_mobile {
     @include mphone {
-      width: 200px;
+      width: 156px;
+      margin: .5rem 0 1rem 1.25rem;
     }
     @include lphone {
-      width: 230px;
-      padding: 1rem;
+      width: 168px;
+      margin: .5rem 0 1rem 1.25rem;
     }
     @include tablet {
-      width: 230px;
-      padding: 1rem;
+      display: none;
     }
     @include desktop {
-    
+      display: none;
     }
     @include ldesktop {
-    
+      display: none;
     }
   display: block;
-  width: 180px;
+  width: 146px;
   height: auto;
-  margin: 0 auto;
+  margin: .5rem 0 1rem 1.25rem;
   padding: .5rem;
-  // background: rgba(255, 0, 0, .3) !important; //devred
 }
+
+.branding_desktop {
+  @include tablet {
+    display: block;
+    width: 240px;
+    margin: 1.25rem 0 0 1.25rem;
+  }
+  @include desktop {
+    display: block;
+    width: 290px;
+    margin: 1.25rem 0 0 1.25rem;
+  }
+  @include ldesktop {
+    display: block;
+    width: 320px;
+    margin: 1.5rem 0 0 1.5rem;
+  }
+  display: none;
+  height: auto;
+}
+
+
 
 
 // NAVBAR - this is the parent of the mobile menu. It needs a width, which is modified in the media queries as appropriate for device. Display is block, changed to flex im MQ to set desktop menu position relative to .navbar container. The height of .navbar determines the vertical position of the desktop menu.
 .navbar {
+    @include mphone {
+      width: 46px;
+      margin: .575rem 1.5rem 0 0;
+    }
+    @include lphone {
+      width: 50px;
+      margin: .575rem 1.5rem 0 0;
+    }
+    @include tablet {
+      width: 380px;
+      padding: .5rem 1rem 0 0;
+    }
+    @include desktop {
+      width: 440px;
+      padding: .5rem 1.5rem 0 0;
+    }
+    @include ldesktop {
+      width: 500px;
+      padding: .5rem 1rem 0 0;
+    }
   display: block;
   // width: 3.75rem;
   // height: 3.75rem;
-  margin: 0;
-  margin: .5rem .5rem 0 0;
+  margin: .5rem 1rem 0 0;
+  // margin: .5rem .5rem 0 0;
   padding: 0;
+  width: 44px;
 }
 
 // !VA Set display: block here, and display: none on +tablet. If this element is displayed 
@@ -79,31 +152,23 @@
     display: none;
   }
   display: block;
-
 }
 
 .mobile_menu_icon {
-  span {
-    @include mphone {
-      font-size: 4rem;
-    }
-    @include lphone {
-      padding: .5rem;
-      font-size: 5rem;
-    }
-    @include tablet {
-    
-    }
-    @include desktop {
-    
-    }
-    @include ldesktop {
-    
-    }
-    font-size: 3.75em;
-    color: $dark_blue; 
-    line-height: 2.25rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile_menu_logo {
+  // width: 100%;
+  width: 40px !important;
+  height: auto;
+}
+
+.mobile_menu_arrow_svg {
+  width: 30px;
+  height: 15px;
 }
 
 .mobile_menu_list {
@@ -112,6 +177,7 @@
 
 .mobile_menu_list_item {
   padding: .25rem 0;
+  color: $secondary_color;
   font-family: $primary_font;
   font-size: 1.75rem;
   font-weight: 600;
@@ -119,9 +185,8 @@
 }
 
 .mobile_menu_list_item {
-  color: $dark_blue;
+  color: $primary_color;
 }
-
 
 .desktop_menu {
   // @include tablet {
@@ -154,45 +219,39 @@
   // !VA Position menu at bottom of .nav element
   align-items: center;
   justify-content: space-between;
-  width: 450px;
+  // width: 340px;
   // !VA height = height of .nav
   height: 100%;
-  padding-right: 1rem;
+  // padding-right: 1rem;
   visibility: hidden;
   list-style-type: none;
 }
 
 .desktop_menu_list_item {
-  @include mphone {
-  
-  }
-  @include lphone {
-  
-  }
+  // color: $primary_color;
+
+}
+
+.desktop_menu_list_item a {
   @include tablet {
     font-size: 1.188rem;
   }
   @include desktop {
-  
+    font-size: 1.575rem;
   }
   @include ldesktop {
-  
+    font-size: 1.75rem;
   }
-  color: $dark_blue;
   font-family: $secondary_font;
   font-size: 1.313rem;
   font-weight: 600;
   line-height: 1.75rem;
-}
-
-.desktop_menu_list_item a {
-  a {
-    color: $secondary_link_color;
-    font-weight: 400;
-    &:hover {
-      color: var(--link-color) !important;
-    } 
-  }
+  color: $secondary_link_color;
+  font-weight: 500;
+  // background: rgba(255, 0, 0, .3) !important; //devred
+  &:hover {
+    color: $secondary_hover_color !important;
+  } 
 }
 
 .mobile_menu_close {
@@ -221,5 +280,76 @@
   /* opacity: 1;
   transition: opacity .25s; 
   border-bottom: 8px solid var(--primary_icon-color); */
+}
+
+
+// !VA This is the only way to get expanded fonts...https://stackoverflow.com/questions/73871691/how-do-i-fix-font-stretch-property-to-start-working
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 200 900;
+  font-stretch: 50% 200%;
+  src: url(https://fonts.gstatic.com/s/inconsolata/v31/QldKNThLqRwH-OJ1UHjlKGlZ5qg.woff2) format("woff2");
+}
+
+
+.bottom_bar {
+    @include mphone {
+      height: 1.313rem;
+    }
+    @include lphone {
+      height: 1.375rem;
+    }
+    @include tablet {
+      height: 1.688rem;
+    }
+    @include desktop {
+      height: 1.938rem;
+    }
+    @include ldesktop {
+      height: 2.25rem;
+    }
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  // height: 1.25rem;
+  background-color: $primary_accent_color;
+}
+
+.bottom_bar_content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bottom_bar h2 {
+    @include mphone {
+      font-size: 1.063rem;
+    }
+    @include lphone {
+      font-size: 1.125rem;
+    }
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+    @include ldesktop {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  padding-bottom: .125rem;
+  font-family: "Inconsolata";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  // font-stretch: expanded;
+  // font-stretch: 140%;
+  color: $light_text_color;
 }
 
