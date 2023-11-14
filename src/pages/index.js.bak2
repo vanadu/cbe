@@ -1,0 +1,168 @@
+import Image from 'next/image'
+
+import RobertJohnson from '../../public/images/landing-img-robert-johnson.jpg'
+import CharleyPatton from '../../public/images/landing-img-charley-patton.jpg'
+import SonHouse from '../../public/images/landing-img-son-house.jpg'
+import SkipJames from '../../public/images/landing-img-skip-james.jpg'
+import MuddyWaters from '../../public/images/landing-img-muddy-waters.jpg'
+import BukkaWhite from '../../public/images/landing-img-bukka-white.jpg'
+import Arrowhead from '../../public/images/arrowhead-bullet.svg'
+
+//prettier-ignore
+function Home() {
+
+  
+  return (
+    <>
+      <section className='landing'>
+        <div className="header-spacer"></div>
+        <div className='section_container'>
+          <div className='section_heading'>
+            <h2 className="section_heading--text">Gateway to Learning</h2>
+            <hr class="section_heading--rule" />
+          </div>
+          <div className='section_content'>
+            <p className="section_content-text">It&rsquo;s one of American history&rsquo;s most inspirational stories — how a handful of the most unlikely people in one of the most unlikely locations on Earth created a sound that left a lasting imprint on music all over the world. From its origins in early 20th century Mississippi, the influence of Delta blues on every aspect of American popular music is unmistakable and continues to resonate throughout the world.</p>
+          </div>
+          <div className='section_grid--bluesmen'>
+            <hr class="section_grid--bluesmen-rule" />
+            <div className="section_grid--bluesmen-grid">
+              <figure className='section_grid--bluesmen-figure'>
+                <Image 
+                  src={RobertJohnson} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  className="section_grid--bluesmen-img" alt="Robert Johnson" 
+                />
+                <figcaption className='section_grid--bluesmen-caption'>Robert Johnson</figcaption>
+              </figure>
+              <figure className='section_grid--bluesmen-figure'>
+              <Image 
+                  src={CharleyPatton} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  className="section_grid--bluesmen-img" alt="Robert Johnson" 
+                />
+                <figcaption className='section_grid--bluesmen-caption'>Charley Patton</figcaption>
+              </figure>
+              <figure className='section_grid--bluesmen-figure'>
+                <Image 
+                    src={SonHouse} 
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                    className="section_grid--bluesmen-img" alt="Son House" 
+                  />
+                <figcaption className='section_grid--bluesmen-caption'>Son House</figcaption>
+              </figure>
+              <figure className='section_grid--bluesmen-figure'>
+              <Image 
+                  src={SkipJames} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  className="section_grid--bluesmen-img" alt="Skip James" 
+                />
+                <figcaption className='section_grid--bluesmen-caption'>Skip James</figcaption>
+              </figure>
+              <figure className='section_grid--bluesmen-figure'>
+                <Image 
+                  src={BukkaWhite} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  className="section_grid--bluesmen-img" alt="Bukka White" 
+                />
+                <figcaption className='section_grid--bluesmen-caption'>Bukka White</figcaption>
+              </figure>
+              <figure className='section_grid--bluesmen-figure'>
+                <Image 
+                  src={MuddyWaters} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  className="section_grid--bluesmen-img" alt="Muddy Waters" 
+                />
+                <figcaption className='section_grid--bluesmen-caption'>Muddy Waters</figcaption>
+              </figure>
+            </div>
+            <hr class="section_grid--bluesmen-rule" />
+          </div>
+          <div className='section_content'>
+            <p className="section_content-text">The <span className='italic'>Crossroads Blues Experience</span> engages students’ attention and imagination with a multi-stream presentation merging live music with historical visual media and spoken narrative that contextualizes the emergence of blues music and its transformational effect on global popular culture. <span className='italic'>Crossroads Blues Experience</span> empowers students of all ethnic and socioeconomic backgrounds by demonstrating how individuals can overcome adversity to have a profound influence on human events.</p>
+          </div>
+          <div className="page-separator">
+          </div>
+        </div>
+
+
+      </section>
+      <hr className="separator_rule"/>
+      <section className='mission'>
+        <div className='section_container container'>
+          <div className='section_heading'>
+            <h2 className="section_heading--text">Our Mission</h2>
+            <hr class="section_heading--rule" />
+          </div>
+          <div className='section_content'>
+            <p className="section_content-text">
+            Our mission is to inspire and educate Maryland students with a multimedia experience interweaving live music, geography, social studies, and history based on the narrative of the origins of blues music in the Mississippi Delta. Founded on the concept of the Crossroads as intersection point between cultures and ethnicities, the Crossroads Blues Experience aims to empower young people to achieve their innate potential.
+            </p>
+            <h3 className='section_content-subhead'>Abstract</h3>
+            <p className="section_content-text">
+              Young people in the Smartphone Generation are accustomed to receiving information through multiple concurrent streams, i.e. streaming video content on a large screen while texting with friends or consuming content or games on their smartphones. In this content delivery mode, a quick succession of images often replaces a verbal narrative in storytelling. 
+            </p>
+            <p className="section_content-text">
+              <span className='italic'>Crossroads Blues Experience</span> emulates this multi-stream mode of information processing by merging live musical performance with multimedia-augmented narratives so that students can be immersed both in the story as well as its historical context. By fusing live and multimedia content and a positive, motivational message, we aim to: 
+            </p>
+            <div className='section_content-container'>
+              <ul className='section_content--list'>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                Inspire and empower young people. Demonstrate how individuals can influence world events by developing their innate talents and following their individual passion
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Enhance awareness of music. Introducing music as it was played and performed before the prevalence of recorded music ca. 1918-194 demonstrates how music has become foundational to 21st century life.
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Underscore the dynamic nature of music. By presenting music as historically-accurate documents we demonstrate how the nature and character of music changes over time
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Present music as a gateway to history. By interweaving live music with historical images we enhance students’ sense of historicity
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Highlight the role of influence in the arts. Demonstrate how the arts shape human behavior in unpredictable ways over the long periods of time
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Infuse knowledge of geography based on the narrative of blues history and its roots in the Mississippi Delta, the migration to Chicago, its influence on British music of the 60’s as well as other centerpoints of blues music such as New Orleans and Memphis
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Present live music with acoustic instruments as alternative to pre-recorded or electronic music. Give students the opportunity to see and hear music being made with simple instruments in a small group setting in real fidelity rather than reproduced through a speaker, with the goal of inspiring them to make music instead of just consuming it.
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Highlight how socioeconomic motivators often drive human behavior. Demonstrate the relationship between Jim Crow, the Great Migration and the evolution of urban Chicago blues.
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Highlight African-American achievement. Demonstrate how Black Americans came to define world music and culture of the 20th century
+                </li>
+                <li className='section_content--list-item'><Arrowhead className='arrowhead-bullet' />
+                  Establish the interconnection between secular blues and African-American spirituals. Show how spirituals influenced mainstream popular musical styles such as country/western, bluegrass and jazz. 
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default Home

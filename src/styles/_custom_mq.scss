@@ -1,0 +1,633 @@
+// !VA _custom_mq.scss
+.header {
+  @include mphone {
+    height: 94px;
+  }
+  @include lphone {
+    height: 102px;
+  }
+  @include tablet {
+    height: 106px;
+  }
+  @include desktop {
+    height: 118px;
+  }
+  @include ldesktop {
+    height: 148px;
+  }
+}
+
+.header_container {
+  @include mphone {
+    padding: .688rem .5rem 0;
+  }
+  @include lphone {
+    padding: .75rem 1.25rem .5rem .75rem;
+  }
+  @include tablet {
+    padding: .75rem 1rem;
+  }
+  @include desktop {
+    padding: .75rem 2rem;
+  }
+  @include ldesktop {
+    padding: 1.25rem 3rem;
+  }
+}
+
+.header_content {
+  width: 100%;
+}
+
+.branding {
+  @include mphone {
+    width: 280px;
+  }
+  @include lphone {
+    width: 300px;
+  }
+  @include tablet {
+    width: 330px;
+  }
+  @include desktop {
+    width: 380px;
+  }
+  @include ldesktop {
+    width: 420px;
+  }
+}
+
+.branding_head--content-text {
+  @include mphone {
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+  @include lphone {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+  }
+  @include tablet {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  @include desktop {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  @include ldesktop {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
+}
+
+.branding_head--content-rule {
+  @include mphone {
+    margin: .313rem .5rem 0;
+  }
+  @include lphone {
+    margin: .313rem .5rem .125rem;
+  }
+  @include tablet {
+    margin: .375rem .5rem .125rem;
+  }
+  @include desktop {
+    margin: .438rem .438rem .188rem;
+  }
+  @include ldesktop {
+    margin: .5rem .375rem .225rem;
+  }
+}
+
+.branding_subhead--content-text {
+  @include mphone {
+    font-size: 1.25rem;
+    letter-spacing: .02rem;
+  }
+  @include lphone {
+    font-size: 1.313rem;
+    letter-spacing: .04rem;
+  }
+  @include tablet {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  @include desktop {
+    font-size: 1.75rem;
+    letter-spacing: .01rem;
+  }
+  @include ldesktop {
+    font-size: 1.88rem;
+    letter-spacing: .05rem;
+  }
+}
+
+// !VA height of .navbar should conform to the dimensions of the menu-icon
+// !VA desktop: hight of navbar determines vertical position of menu
+.navbar {
+  @include mphone {
+    width: 42px;
+    height: 60px;
+    padding-top: .25rem;
+  }
+  @include lphone {
+    width: 42px;
+    height: 60px;
+    padding-top: .313rem;
+  }
+  @include tablet {
+    width: 320px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  @include desktop {
+    width: 360px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  @include ldesktop {
+    width: 440px;
+    height: 50px;
+    margin: .5rem 1.5rem 0 0;
+  }
+}
+
+.navbar_mobile--menu { 
+  @include mphone {
+    padding: .25rem 0 0;
+  }
+  @include lphone {
+    padding: 0;
+  }
+}
+
+.navbar_mobile--menu-icon {
+  span {
+    @include mphone {
+      font-size: 2.75rem;
+      line-height: 2.125rem;
+    }
+    @include lphone {
+      font-size: 3.25rem;
+      line-height: 2.75rem;
+    }
+    @include tablet {
+      display: none;
+      visibility: hidden;
+    }
+    @include desktop {
+      display: none;
+      visibility: hidden;
+    }
+    @include ldesktop {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+}
+
+// !VA Vertical position of menu dependent on height of .nav.
+.navbar_desktop--menu-list {
+  @include tablet {
+    display: flex;
+    visibility: visible;
+  }
+  @include desktop {
+    display: flex;
+    visibility: visible;
+    li {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  @include ldesktop {
+    display: flex;
+    visibility: visible;
+    li {
+      font-size: 1.75rem;
+      line-height: 2.125rem;
+    }
+  }
+}
+
+.header-spacer {
+  @include mphone {
+    height: 120px;
+  }
+  @include lphone {
+    height: 136px;
+  }
+  @include tablet {
+    height: 140px;
+  }
+  @include desktop {
+    height: 180px;
+  }
+  @include ldesktop {
+    height: 210px;
+  }
+}
+
+.section_container {
+  @include tablet {
+    padding: 0 3rem;
+  }
+  @include desktop {
+    width: 900px;
+  }
+  @include ldesktop {
+    width: 1000px;
+  }
+}
+
+.section_heading {
+  @include desktop {
+    margin-bottom: .75rem;
+  }
+  @include ldesktop {
+    margin-bottom: 1rem;
+  }
+}
+
+.section_heading--text {
+  @include mphone {
+    font-size: 1.313rem;
+  }
+  @include lphone {
+    font-size: 1.375rem;
+  }
+  @include tablet {
+    font-size: 1.375rem;
+  }
+  @include desktop {
+    font-size: 1.625rem;
+  }
+  @include ldesktop {
+    font-size: 1.75rem;
+  }
+}
+
+.section_heading--rule {
+  @include mphone {
+    margin-top: .125rem;
+  }
+  @include lphone {
+    margin-top: .188rem;
+  }
+  @include tablet {
+    margin-top: .188rem;
+  }
+  @include desktop {
+    margin-top: .375rem;
+  }
+  @include ldesktop {
+    margin-top: .438rem;
+  }
+}
+
+.section_content-subhead {
+  @include desktop {
+    margin: 1rem 0 .5rem;
+    font-size: 1.313rem;
+  }
+  @include ldesktop {
+    margin: 1rem 0 .5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.section_content-text, .section_content--list {
+  @include mphone {
+    font-size: 1.063rem;
+  }
+  @include lphone {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  @include tablet {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  @include desktop {
+    font-size: 1.313rem;
+    line-height: 1.5em;
+  }
+  @include ldesktop {
+    margin-left: .75rem;
+    font-size: 1.388rem;
+    line-height: 1.5em;
+  }
+}
+
+.section_content--list-item {
+  @include lphone {
+    .arrowhead-bullet {
+      top: 11px;
+    }
+  }
+  @include tablet {
+    .arrowhead-bullet {
+      top: 12px;
+    }
+  }
+  @include desktop {
+    .arrowhead-bullet {
+      top: 15px;
+    }
+  }
+  @include ldesktop {
+    .arrowhead-bullet {
+      top: 16px;
+    }
+  }
+}
+
+.section_grid--bluesmen {
+  @include ldesktop {
+    margin-left: .75rem;
+  }
+}
+
+.section_grid--bluesmen-figure {
+  @include mphone {
+    width: 102px;
+  }
+  @include lphone {
+    width: 110px;
+  }
+  @include tablet {
+    width: 108px;
+  }
+  @include desktop {
+    width: 128px;
+  }
+  @include ldesktop {
+    width: 146px;
+  }
+}
+
+.section_grid--bluesmen-rule {
+  @include mphone {
+    margin-right: .5rem;
+  }
+  @include lphone {
+    margin-right: 1rem;
+  }
+  @include tablet {
+    margin-right: .5rem;
+  }
+  @include desktop {
+    margin-right: 1rem;
+  }
+  @include ldesktop {
+    margin-right: 1.75rem;
+  }
+}
+
+.section_grid--bluesmen-grid {
+  @include tablet {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .25rem;
+  }
+  @include desktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .25rem;
+  }
+  @include ldesktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .25rem;
+  }
+}
+
+.separator_rule {
+  @include ldesktop {
+    height: 1rem;
+  }
+}
+
+
+
+.section_content--seed-video-iframe {
+  @include mphone {
+    width: 345px;
+    height: 194px;
+  }
+  @include lphone {
+    width: 374px;
+    height: 210px;
+  }
+  @include tablet {
+    width: 600px;
+    height: 337px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  @include desktop {
+    width: 600px;
+    height: 337px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  @include ldesktop {
+    width: 800px;
+    height: 450px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+
+
+.contact_form {
+  @include lphone {
+    margin: 0 2rem;
+  }
+  @include tablet {
+    width: 500px;
+    margin: 0 auto;
+  }
+  @include desktop {
+    width: 700px;
+    margin: 0 auto;
+  }
+  @include ldesktop {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.contact_form--title {
+  @include tablet {
+    margin: 8rem 0 3rem;
+  }
+  @include desktop {
+    margin: 8rem 0 3rem;
+  }
+  @include ldesktop {
+    margin: 14rem 0 3rem;
+  }
+}
+
+.contact_form--title-text {
+  @include tablet {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  @include desktop {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  @include ldesktop {
+    margin-top: 2drem;
+    font-size: 2rem;
+  }
+}
+
+.contact_form--feedback-text {
+  display: inline-block;
+  margin: 5rem 0 1rem;
+}
+
+
+.contact-form--input  {
+  @include tablet {
+    width: 100%;
+    margin-bottom: 2rem;
+    label, input {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    label {
+      display: inline;
+      padding-right: .5rem;
+    }
+    input {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 140px;
+    }
+  }
+  @include desktop {
+    width: 100%;
+    margin-bottom: 2rem;
+    label, input {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    label {
+      display: inline;
+      padding-right: .5rem;
+    }
+    input {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 140px;
+    }
+  }
+  @include ldesktop {
+    width: 100%;
+    margin-bottom: 2rem;
+    label, input {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    label {
+      display: inline;
+      padding-right: .5rem;
+    }
+    input {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 140px;
+    }
+  }
+}
+
+.contact_form--button {
+  width: 140px;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  background: rgb(30 58 138);
+  color: #FFF;
+}
+
+.footer {
+  @include mphone {
+    height: 320px;
+  }
+  @include lphone {
+    height: 310px;
+  }
+  @include tablet {
+    height: 290px;
+  }
+  @include desktop {
+    height: 270px;
+  }
+  @include ldesktop {
+    height: 330px;
+  }
+}
+
+.footer_content {
+  @include tablet {
+    padding: 0 2rem;
+  }
+  @include desktop {
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @include ldesktop {
+    width: 1000px;
+    margin: 0 auto; 
+    padding: 0 2rem;
+  }
+}
+
+.footer_content--head-text {
+  @include tablet {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  @include desktop {
+    font-size: 1.313rem;
+    line-height: 1.88rem;
+  }
+  @include ldesktop {
+    margin-top: 2rem;
+    font-size: 1.388rem;
+    line-height: 2rem;
+  }
+}
+
+.footer_content--body-text {
+  @include tablet {
+    font-size: 1rem;
+  }
+  @include desktop {
+    font-size: 1.063rem;
+  }
+  @include ldesktop {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,206 @@
+// !VA Header main and icon menu styling. Header, header-content and .header-content-items is in _custom.scss and _custom_mq.scss
+
+.icon-menu {
+  @include tablet {
+    width: 27%;
+  }
+  @include desktop {
+    width: 30%;
+  }
+  @include ldesktop {
+    width: 20%;
+  }
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  height: 55px;
+  padding-right: .75rem;
+  z-index: 10;
+}
+
+// !VA MAIN NAV
+.mainnav {
+  @include tablet {
+    width: 320px;
+    height: 55px;
+  }
+  @include desktop {
+    width: 360px;
+    height: 55px;
+  }
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.mainnav-menu {
+  // !VA START smaller than iPads menu styling
+  @media screen and (max-width: 767px) {
+    // !VA Transition runs when expanded class is removed
+    transition: opacity .5s;  
+    opacity: 0;
+    &.expanded {
+      transition: opacity .5s;  
+      opacity: 1; // set opacity property to 1, completely visible 
+      ul {
+        display: flex;
+        height: calc(100vh);
+      }
+      // !VA anchor is block so the link covers the entire list item
+      ul li a {
+        display: block;
+      }
+    }
+    ul {
+      display: none;
+      height: 0;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgb( 0, 0, 0, .92);
+      z-index: 5;
+    }
+    li {
+      margin: 0;
+      border-bottom: 1px solid #383838;
+      background-color: var(--button-color);
+      text-align: center;
+
+      display: flex;
+      align-items: center;
+      height: 4rem;
+
+      // !VA This doesn't work...
+      &:hover {
+        background-color: green;
+      }
+      a {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1.5rem 0;
+        color: var(--primary_icon-color);
+        text-decoration: none;
+      }
+    }
+  }
+  // !VA END smaller than iPads menu styling
+  // !VA START tablet and larger menu stying
+  @media screen and (min-width: 768px) { 
+    display: block;
+    width: 100%;
+    ul  {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      li {
+        // !VA Show the anchor on tablets and above. This overrides the default display: none, which is set to ensure that the links on mobile menu don't display even when the parent ul is hidden. Alternatively, we could apply the expanded style to the a tags, but this works for now.
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+  // !VA Need to display the ul by default in order for the media query display: none property to override it
+  ul  {
+    display: flex;
+    padding: 0;
+  } 
+  // !VA Default li properties
+  li {
+    position: relative;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    // !VA This just puts a light shadow on the LI element, not the text itself
+    // box-shadow: 0 2px 2px 2px rgba(9, 9, 9, .23);
+    list-style-type: none;
+    // !VA Sets up the pseudoclass for the hover property below.
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      content: '';
+      opacity: 0;
+      transition: opacity .25s;  
+      border-bottom: 8px solid var(--primary_icon-color);
+    }
+    &:hover:after {
+      opacity: 1;
+      transition: opacity .25s; 
+      border-bottom: 8px solid var(--primary_icon-color);
+    }
+    a {
+      // !VA Hide the link unless expanded (ie the mobile menu is selected_ OR unless the desktop menu is shown via media queries,. Otherwise, it will cover the page and trap the mouse events and cursor. 
+      display: none;
+      width: 100%;
+      padding: 0 0 .75rem;
+      color: var(--primary_icon-color);
+      text-decoration: none;
+    }
+  }
+}
+
+
+.mainnav-mobile {
+  position: relative;
+  width: 55px;
+  height: 100%;
+  // !VA Nudge up 1px
+  margin: -1px 0 0 5px;
+}
+
+// !VA Controls the actual mainnav-icon lines and circle, not the icon position. 
+.mainnav-icon {
+  // !VAS Show mainnav-icon on smaller than iPads. 
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  display: none;
+  position: absolute;
+  // !VA Compensate for the translate -50% to center the element in the container.
+  top: 50%;
+  left: .5rem;
+  width: 40px;
+  height: 40px;
+  // !VA Padding for the hamburger lines
+  padding: .5rem;
+  transform: translateY(-50%);
+  transition: background-color .2s ease-in-out;
+  border: 0;
+  border-radius: 50%;
+  background-color: #555555;
+  cursor: pointer;
+  // !VA Hover doesn't work on browser's responsive view apparently.
+}
+
+.nav-icon {
+  @include mphone {
+    font-size: 32px;
+  }
+  @include lphone {
+    font-size: 32px;
+  }
+  @include tablet {
+    font-size: 30px;
+  }
+  @include desktop {
+    font-size: 32px;
+  }
+  @include ldesktop {
+    font-size: 30px;
+  }
+  margin-top: .25rem;
+  color: var(--primary_icon-color);
+  font-size: 2rem;
+}
+
