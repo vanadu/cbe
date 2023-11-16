@@ -46,9 +46,13 @@ const AccordionContent = ({
   return (
     <>
       <div 
-        className={`accordion-container accordion-container-${index}`}
+        // className={`accordion-container accordion-container-${index}`}
+        className={[styles.accordion_container, 'accordion_container_${index}'].join(' ')}
+
         ref={accordionRef}
         >
+
+
         <div
           onClick={() => handleSetIndex(index)}
           className='accordion'>
