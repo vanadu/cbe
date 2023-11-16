@@ -31,7 +31,7 @@
     background-size: cover;
   }
   // height: 100vh;
-  min-height: 400px;
+  min-height: 420px;
   padding-bottom: .75rem;
   background-image: url('../../public/images/landing-bg.jpg');
   background-repeat: no-repeat;
@@ -46,36 +46,59 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   margin: 0 auto;
   padding: 0 1rem;
   // background: white;
 }
 
-.home_block {
-  font-family: $monospace_font;
-  color: $secondary_color;
 
+
+.content_text, .content_list_item_svg, .content_list_item, .content_list_bullet {
+  @include mphone {
+    padding: .25rem 0;
+    font-size: $mphoneTextFontSize;
+    line-height: $mphoneTextLineHeight;
+  }
+  @include lphone {
+    padding: .25rem 0;
+    font-size: $lphoneTextFontSize;
+    line-height: $lphoneTextLineHeight;
+  }
+  @include tablet {
+    padding: .25rem 0 .125rem;
+    font-size: $tabletTextFontSize;
+    line-height: $tabletTextLineHeight;
+  }
+  
+  @include desktop {
+    padding: .25rem 0;
+    font-size: $desktopTextFontSize;
+    font-weight: 400;
+    line-height: $desktopTextLineHeight;
+  }
+  @include ldesktop {
+    padding: .25rem 0;
+    font-size: $ldesktopTextFontSize;
+    font-weight: 400;
+    line-height: $ldesktopTextLineHeight;
+  }
+  padding: .25rem 0 .188rem;
+  color: $dark_text_color;
+  font-family: $primary_font;
+  font-size: $rootTextFontSize;
+  line-height: $rootTextLineHeight;
+  text-align: left;
 }
 
-.home_headline {
-  width: 100px ;
-  font-family: $monospace_font;
-  // font-size: $rootSubheadFontSize;
-  // line-height: $rootSubheadLineHeight;
-  // font-size: 2.25rem;
-  // line-height: 2.5rem;
-  // text-align: center;
-  background: rgba(0, 0, 255, .3) !important; //devblue
+.home_expander {
+  // background: rgba(0, 128, 0, .3) !important; //devgreen
+  &:first-child {
+    // background: rgba(255, 0, 0, .3) !important; //devred
+
+  }
 }
 
-.blob {
-
-}
-
-.home_topic_slug {
-      color: $content_text_color;
-}
 
 // .accordion_arrow {
 //   width: 36px;
@@ -83,7 +106,10 @@
 //   background: rgba(0, 0, 255, .3) !important; //devblue
 // }
 
+.blob {
+  background: rgba(0, 128, 0, .3) !important; //devgreen
+}
 
-.home-topic-content-heading {}
+
 
 
