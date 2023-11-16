@@ -14,40 +14,41 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.top_bar}>
-        <Link 
-          href='/'
-          className={styles.branding_mobile_link}
-        >
-          <Image 
-            src={CBEHeaderBrandingMobile} 
-            width="0"
-            height="0"
-            sizes="100vw"
-            // style={{ width: '100%', height: 'auto' }}
-            className={styles.branding_mobile} alt="XXX"
-            />
-        </Link>
-        <Link href='/'>
-          <Image 
-            src={CBEHeaderBrandingDesktop} 
-            width="0"
-            height="0"
-            sizes="100vw"
-            // style={{ width: '100%', height: 'auto' }}
-            className={styles.branding_desktop} alt="XXX"
-            />
-        </Link>
+        <div className={styles.branding}>
+          <Link 
+            href='/'
+            className={styles.branding_mobile_link}
+          >
+            <Image 
+              src={CBEHeaderBrandingMobile} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_mobile_img} alt="XXX"
+              />
+          </Link>
+          <Link href='/'>
+            <Image 
+              src={CBEHeaderBrandingDesktop} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              // style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_desktop} alt="XXX"
+              />
+          </Link>
+        </div>
         <Navbar />
-
       </div>
       <div className={styles.bottom_bar}>
-        <div className={styles.bottom_bar_content}>
+        {/* <div className={styles.bottom_bar_content}>
           <h2>inspire</h2>
           <h2>&bull;</h2>
           <h2>educate</h2>
           <h2>&bull;</h2>
           <h2>engage</h2>
-        </div>
+        </div> */}
       </div>
     </div>
   )

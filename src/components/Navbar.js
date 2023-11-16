@@ -103,6 +103,7 @@ export default function Header() {
               <Link
                 href='/about'
                 className={styles.nav_link}>
+                
                 about
               </Link>
             </li>

@@ -1,0 +1,88 @@
+@import 'variables.scss';
+@import './mixins/mediaqueries.scss';
+
+// Background Images
+// !VA home page
+.home_bg {
+  @include mphone {
+    min-height: 510px;
+    background-position: -440px 0px;
+  }
+  @include lphone {
+    min-height: 720px;
+    background-position: -640px 0px;
+  }
+  @include tablet {
+    background-image: url('https://crossroadsbluesexperience.com/bg-img/landing-bg.jpg');
+    background-position: center -140px;
+    background-size: 240%;
+  }
+  @include desktop {
+    height: 100vh;
+    background-image: url('https://crossroadsbluesexperience.com/bg-img/landing-bg.jpg');
+    background-position: center -100px;
+    background-size: 200%;
+  }
+  @include ldesktop {
+    height: 100vh;
+    background-image: url('https://crossroadsbluesexperience.com/bg-img/landing-bg.jpg');
+    background-position: center top;
+    background-size: cover;
+  }
+  // height: 100vh;
+  min-height: 400px;
+  padding-bottom: .75rem;
+  background-image: url('../../public/images/landing-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: -380px 0px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 1rem;
+  // background: white;
+}
+
+.home_block {
+  font-family: $monospace_font;
+  color: $secondary_color;
+
+}
+
+.home_headline {
+  width: 100px ;
+  font-family: $monospace_font;
+  // font-size: $rootSubheadFontSize;
+  // line-height: $rootSubheadLineHeight;
+  // font-size: 2.25rem;
+  // line-height: 2.5rem;
+  // text-align: center;
+  background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+.blob {
+
+}
+
+.home_topic_slug {
+      color: $content_text_color;
+}
+
+// .accordion_arrow {
+//   width: 36px;
+//   height: auto;
+//   background: rgba(0, 0, 255, .3) !important; //devblue
+// }
+
+
+.home-topic-content-heading {}
+
+

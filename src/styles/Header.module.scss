@@ -7,7 +7,7 @@
 // !VA Header 
 .header {
   @include mphone {
-    height: 110px;
+    height: 98px;
   }
   @include lphone {
     height: 116px;
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: 90px;
   z-index: 10;
   background-color: #dceaec;
 }
@@ -41,11 +41,34 @@
   @include ldesktop {
     justify-content: space-between;
   }
+  position: relative;
   display: flex;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
 
+}
+
+.branding {
+  @include mphone {
+    width: 140px;
+    margin: .75rem 0 0 1rem;
+  }
+  @include lphone {
+    width: 170px;
+    margin: .75rem 0 0 1rem;
+  }
+  @include tablet {
+  
+  }
+  @include desktop {
+  
+  }
+  @include ldesktop {
+  
+  }
+  width: 140px;
+  margin: .75rem 0 0 1rem;
 }
 
 .branding_mobile_link {
@@ -61,7 +84,7 @@
   display: block;
 }
 
-.branding_mobile {
+.branding_mobile_img {
     @include mphone {
       width: 156px;
       margin: .5rem 0 1rem 1.25rem;
@@ -79,11 +102,11 @@
     @include ldesktop {
       display: none;
     }
+
   display: block;
-  width: 146px;
   height: auto;
-  margin: .5rem 0 1rem 1.25rem;
-  padding: .5rem;
+  // margin: .5rem 0 0 1.25rem;
+  // padding: .5rem;
 }
 
 .branding_desktop {
@@ -155,18 +178,31 @@
 }
 
 .mobile_menu_icon {
+  @include mphone {
+    padding-top: .5rem;
+  }
+  @include lphone {
+    padding-top: .5rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .mobile_menu_logo {
-  // width: 100%;
+  @include lphone {
+    width: 54px !important;
+  }
   width: 40px !important;
   height: auto;
 }
 
 .mobile_menu_arrow_svg {
+  @include lphone {
+    margin-top: .25rem;
+    width: 36px;
+    height: 18px;
+  }
   width: 30px;
   height: 15px;
 }
@@ -282,26 +318,9 @@
   border-bottom: 8px solid var(--primary_icon-color); */
 }
 
-
-// !VA This is the only way to get expanded fonts...https://stackoverflow.com/questions/73871691/how-do-i-fix-font-stretch-property-to-start-working
-@font-face {
-  font-family: "Inconsolata";
-  font-style: normal;
-  font-weight: 200 900;
-  font-stretch: 50% 200%;
-  src: url(https://fonts.gstatic.com/s/inconsolata/v31/QldKNThLqRwH-OJ1UHjlKGlZ5qg.woff2) format("woff2");
-}
-
-
 .bottom_bar {
-    @include mphone {
-      height: 1.313rem;
-    }
-    @include lphone {
-      height: 1.375rem;
-    }
     @include tablet {
-      height: 1.688rem;
+      height: 2px;
     }
     @include desktop {
       height: 1.938rem;
@@ -314,17 +333,22 @@
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  height: 2px;
   // height: 1.25rem;
   background-color: $primary_accent_color;
 }
 
 .bottom_bar_content {
-  display: flex;
+  @include tablet {
+    
+  }
+  display: none;
   justify-content: space-evenly;
   width: 100%;
   max-width: 1200px;
 }
 
+// !VA This has gone away
 .bottom_bar h2 {
     @include mphone {
       font-size: 1.063rem;
@@ -343,6 +367,7 @@
       font-size: 1.75rem;
       line-height: 2rem;
     }
+  display: none;
   padding-bottom: .125rem;
   font-family: "Inconsolata";
   font-weight: 500;

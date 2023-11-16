@@ -1,0 +1,126 @@
+.react-tabs {
+  @include mphone {
+    // font-size: $mphoneSubheadFontSize;
+    // line-height: $mphoneSubheadLineHeight;
+  }
+  @include lphone {
+    // font-size: $lphoneSubheadFontSize;
+    // line-height: $lphoneSubheadLineHeight;
+  }
+  @include tablet {
+    // font-size: $tabletSubheadFontSize;
+    // line-height: $tabletSubheadLineHeight;
+  }
+  @include desktop {  
+    // font-size: $desktopSubheadFontSize;
+    // line-height: $desktopSubheadLineHeight;
+  
+  }
+  @include ldesktop {
+    // font-size: $ldesktopSubheadFontSize;
+    // line-height: $ldesktopSubheadLineHeight;
+    padding: 0 0 2rem;
+    margin: 0 0 .75rem;
+  }
+  -webkit-tap-highlight-color: transparent;
+  padding: 0 0 1.5rem;
+
+  
+  &__tab-list {
+    border-bottom: 1px solid #aaa;
+    padding: 0 0 .75rem;
+    margin: 0 0 .5rem;
+
+  }
+
+  // .home-topic-heading {
+    
+
+  // }
+
+  // .home-topic-slug {
+  //   color: $content_text_color;
+  // }
+
+
+
+
+
+
+  &__tab {
+    display: inline-block;
+    display: block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    padding: .25rem .5rem 0 1.5rem;
+    margin-left: .5rem;
+
+    // !VA 2023.11.05
+    text-align: center;
+
+
+    &::before  {
+      @include ldesktop {
+        top: 4px;
+      }
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 2rem;
+      height: auto;
+      content: url('../../public/images/icon-triangle-right.svg');
+    }
+
+
+    &--selected {
+      // background: #fff;
+      // border-color: #aaa;
+      color: darkred;
+      font-weight: 700;
+      // border-radius: 5px 5px 0 0;
+      &::before  {
+        @include ldesktop {
+          top: 4px;
+        }
+        position: absolute;
+        top: -.25rem;
+        left: -2rem;
+        width: 4rem;
+        height: auto;
+        content: url('../../public/images/icon-triangle-down.svg');
+      }
+
+    }
+
+    &--disabled {
+      color: GrayText;
+      cursor: default;
+    }
+
+    &:focus {
+      outline: none;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        left: -4px;
+        right: -4px;
+        bottom: -5px;
+        // background: #fff;
+      }
+    }
+  }
+
+  &__tab-panel {
+    display: none;
+
+    &--selected {
+      display: block;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// Import the Google fonts using the Next font plugin. I'm not even sure this works...there's something in the comments about this not working with iOS, and all these other steps might just be the workaround for that. One of these days I'll have to test that.
+// Import the Google fonts using the Next font plugin. I'm not even sure this works...there's something in the comments about this not working with iOS, and all these other steps might just be the workaround for that. One of these days I'll have to test that. 2023.11.15 apparently it still doesn't work an you have to import them with the import statement in globals.css
 import { Oswald, Inter, Open_Sans, Inconsolata } from 'next/font/google'
 import Layout from '../components/Layout'
 import { useRouter } from 'next/router'

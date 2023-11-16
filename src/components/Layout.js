@@ -1,9 +1,9 @@
-// import Footer from "./Footer"
+import Footer from "./Footer"
 import Header from "./Header"
 // import NavBar from "./header/NavBar";
 // import BottomNav from "./BottomNav"
 
-// import * as styles from '../styles/Light.module.scss'
+import * as styles from '../styles/Footer.module.scss'
 
 
 const Layout = ({ children }) => {
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         { children }
       </div>
       {/* <BottomNav /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
