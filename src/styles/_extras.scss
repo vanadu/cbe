@@ -1,3 +1,6 @@
+@import 'variables.scss';
+@import './mixins/mediaqueries.scss';
+
 .devred {
   border: 1px solid red !important;
 }
@@ -40,7 +43,7 @@
   &:before {
     display: block;
     width: 100%;
-    border-bottom: 1px solid var(--horiz-rule-color);
+    // border-bottom: 1px solid var(--horiz-rule-color);
     content: '';
   }
 }
@@ -50,11 +53,12 @@
   display: block;
   // !VA Keep it narrow to prevent #FFF whitespace at edges
   // !VA Changed background color to transparent
+  width: 60%;
   height: 5px;
   margin: 0 auto;
   background-image: radial-gradient(
     circle at 2.5px,
-    var(--secondary_accent-color) 1.25px,
+    #212121 1.25px,
     transparent 2.5px
   );
   background-repeat: repeat-x, repeat-y;

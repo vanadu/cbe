@@ -21,8 +21,6 @@ const Expander = ({
   setActiveExpanderIndex,
 }) => {
 
-  const [maz, setMaz] = useState('')
-
   // !VA 
   const expanderRef = useRef()
 
@@ -30,7 +28,6 @@ const Expander = ({
     if (activeExpanderIndex !== index ) {
       setActiveExpanderIndex(index);
       // console.log('LATER activeExpanderIndex :>> ' + activeExpanderIndex);
-      setMaz('blob_' + index)
 
     } else {
       setActiveExpanderIndex(0);
@@ -41,11 +38,6 @@ const Expander = ({
       expanderRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 300);
   }
-
-  console.log('styles :>> ');
-  console.log(styles);
-  console.log('maz :>> ');
-  console.log(maz);
 
 
   return (

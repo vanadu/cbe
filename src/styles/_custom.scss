@@ -1,3 +1,6 @@
+
+@import 'extras.scss';
+
 .devred {
   border: 1px solid red !important;
 }
@@ -47,11 +50,47 @@ html {
 
 // !VA Pages
 
-// !VA ACCORDION styles
 
-.foo_1 {
+.section_grid--bluesmen {
   width: 100%;
-  height: 20px;
-  background: rgba(0, 0, 255, .3) !important; //devblue
+  margin-top: .5rem;
+  margin-bottom: .75rem;
 }
 
+.section_grid--bluesmen-rule {
+  margin: .5rem 0;
+  border-width: 0;
+  border-top-width: 1px;
+  border-color: #000;
+  background-color: #000;
+}
+
+.section_grid--bluesmen-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .25rem;
+}
+
+.section_grid--bluesmen-figure {
+  position: relative;
+  width: 92px;
+}
+
+.section_grid--bluesmen-img {
+  margin-right: .25rem;
+}
+
+.section_grid--bluesmen-caption {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background: rgba(0, 0, 0, .6);
+  color: #FFF;
+  font-family: var(--secondary_font);
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
