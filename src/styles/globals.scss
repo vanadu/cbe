@@ -1,7 +1,16 @@
-@import './mixins/mediaqueries';
-@import 'variables';
-@import './nav';
-@import './react-tabs.scss';
-@import './custom';
+// @import './mixins/mediaqueries';
+@import 'variables.scss';
+@import 'extras';
+// @import './typography';
+// @import './nav';
+// @import './react-tabs.scss';
+@import 'custom';
 @import './custom_mq';
 
+.content {
+  @include desktop {
+    // max-width: 1000px;
+  }
+  display: flex;
+  justify-content: center;
+}

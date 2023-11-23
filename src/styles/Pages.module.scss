@@ -1,32 +1,38 @@
+// !VA You can not import any stylesheets into a CSS module that contain instructions that are not compatibile with CSS modules. For instance, you can't import globals.scss or custom.scss because those global stylesheets reference global styles and HTML elements like body, html etc.
 @import 'variables.scss';
 @import './mixins/mediaqueries.scss';
+
 
 // !VA Placeholder style
 .placeholder {
   background: rgba(255, 0, 0, .3) !important; //devred
 }
+
+
 // Background Images
 // !VA home page
 .home_bg {
   @include mphone {
     min-height: 510px;
-    background-position: -440px 0px;
+    background-position: 69% 20px;
   }
   @include lphone {
     min-height: 720px;
     background-position: -640px 0px;
+    background-position: 69% 0px;
   }
   @include tablet {
-    min-height: 680px;
+    // min-height: 680px;
+    min-height: 1024px;
     background-image: url('../../public/images/landing-bg.jpg');
-    background-position: -500px -60px;
-    background-size: 180%;
+    background-position: 76% 0;
+    background-size: 200%;
   }
   @include desktop {
-    height: 100vh;
+    // min-height: 860px;
     background-image: url('../../public/images/landing-bg.jpg');
-    background-position: center -100px;
-    background-size: 200%;
+    background-position: 76% 0;
+    background-size: 180%;
   }
   @include ldesktop {
     height: 100vh;
@@ -40,6 +46,8 @@
   background-image: url('../../public/images/landing-bg.jpg');
   background-repeat: no-repeat;
   background-position: -380px 0px;
+  
+  background-position: -360px center;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -48,6 +56,12 @@
 .section {
   @include tablet {
     padding: 0 2rem 2rem;
+  }
+  @include desktop {
+    padding: 0 3rem 2rem;
+  }
+  @include ldesktop {
+    padding: 0 3rem 2rem;
   }
   display: flex;
   flex-direction: column;
@@ -58,13 +72,70 @@
   padding: 0 1rem 2rem;
 } 
 
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+
 .figure_full_width {
+  @include tablet {
+    margin: .75rem 0 .5rem;
+  }
+  @include desktop {
+    margin: .75rem 0 .5rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   margin: .5rem 0 .25rem;
 }
+
+.figure_full_width_image {
+  @include desktop {
+    width: 60%
+  }
+  width: 80%;
+  height: auto;
+}
+
+.figure_two_up {
+  @include tablet {
+    width: 80%;
+    padding: 1rem 0;
+  }
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .5rem 0;
+}
+
+.figure_two_up_image {
+  @include tablet {
+    padding: .5rem;
+  }
+  width: 49%;
+  height: auto;
+}
+
+.figure_home_gif_image {
+  @include lphone {
+    width: 300px;
+  }
+  @include tablet {
+    width: 340px;
+  }
+  @include desktop {
+    width: 360px;
+  }
+  width: 260px;
+  height: auto;
+  margin: 1rem 0;
+  border: 5px solid $primary_accent_color;
+  
+}
+
 
 .content_text, .content_list_item_svg, .content_list_item, .content_list_bullet {
   @include mphone {
@@ -119,14 +190,145 @@
 }
 
 .home_content_heading_h1, .home_content_heading_h2 {
+  @include tablet {
+    padding: 1rem 0 .5rem;
+  }
   padding: .5rem 0 0;
   color: $primary_color;
   font-family: $primary_font;
   font-size: 1.25rem;
   font-weight: 700 !important;
   line-height: 1.5rem;
+  text-align: center;
 }
 
+// !VA Home Page - Inspire section
+
+.grid_bluesmen {
+  @include mphone {
+    width: 320px;
+  }
+  @include lphone {
+    width: 340px;
+  }
+  @include tablet {
+    width: 720px;
+  }
+  @include desktop {
+    width: 600px;
+    margin-right: 40px;
+    padding: 1rem 1rem 1rem 0;
+  }
+  @include ldesktop {
+    width: 840px;
+    padding-right: 80px;
+
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 0;
+  width: 280px;
+}
+
+.grid_bluesmen_rule {  
+  @include mphone {
+    // margin-right: .5rem;
+  }
+  @include lphone {
+    // margin-right: 1rem;
+  }
+  @include tablet {
+    // margin-right: .5rem;
+  }
+  @include desktop {
+    // margin-right: .313rem;
+  }
+  @include ldesktop {
+    // margin-right: 1.75rem;
+  }
+  display: block;
+  width: 100%;
+  margin: .25rem auto;
+  border-width: 0;
+  border-top-width: 1px;
+  border-color: #000;
+  background-color: #000;
+}
+
+.grid_bluesmen_grid {
+  @include tablet {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .375rem;
+  }
+  @include desktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  @include ldesktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .375rem;
+}
+
+.grid_bluesmen_figure {
+  @include mphone {
+    // width: 102px;
+  }
+  @include lphone {
+    // width: 104px;
+  }
+  @include tablet {
+    // width: 108px;
+  }
+  @include desktop {
+    // width: 128px;
+  }
+  @include ldesktop {
+    // width: 146px;
+  }
+  position: relative;
+  // width: 92px;
+}
+
+.grid_bluesmen_img {
+  margin-right: .25rem;
+}
+
+.grid_bluesmen_caption {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background: rgba(0, 0, 0, .6);
+  color: #FFF;
+  font-family: var(--secondary_font);
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+
+// !VA Home Page - Educate section
+
+
+
+.figcaption_educate_above {
+
+}
+
+.figcaption_educate_below {
+
+}
+
+
+// !VA These styles should be moved into the typography SCSS file and defined as global in kebab case
 .semibold {
   font-weight: 600;
 }

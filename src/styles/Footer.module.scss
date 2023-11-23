@@ -1,4 +1,5 @@
 
+// !VA You can not import any stylesheets into a CSS module that contain instructions that are not compatibile with CSS modules. For instance, you can't import globals.scss or custom.scss because those global stylesheets reference global styles and HTML elements like body, html etc.
 @import 'variables.scss';
 @import './mixins/mediaqueries.scss';
 

@@ -1,5 +1,5 @@
 
-@import 'extras.scss';
+// @import 'extras.scss';
 
 .devred {
   border: 1px solid red !important;
@@ -14,12 +14,12 @@
   border: 1px solid magenta !important;
 }
 
-*, ::before, ::after {
-  border-width: 0;
-  border-style: solid;
-  border-color: #E5E7EB;
-  box-sizing: border-box;
-}
+// *, ::before, ::after {
+//   border-width: 0;
+//   border-style: solid;
+//   border-color: #E5E7EB;g
+//   box-sizing: border-box;
+// }
 
 // !VA TODO: Fix this font stack
 body {
@@ -46,11 +46,13 @@ html {
   text-align: center;
 }
 
-// !VA Header is in Header.module.scss
+// !VA HEADER
+// ============
+// !VA header styles are in Header.module.scss
 
-// !VA Pages
-
-
+// !VA PAGES
+// =========
+// Page styles are in Pages.module.scss
 .section_grid--bluesmen {
   width: 100%;
   margin-top: .5rem;
@@ -70,6 +72,7 @@ html {
   width: 100%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: .25rem;
+  background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 .section_grid--bluesmen-figure {
@@ -94,3 +97,4 @@ html {
   font-weight: 300;
   line-height: 1.25rem;
 }
+

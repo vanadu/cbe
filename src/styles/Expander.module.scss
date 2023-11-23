@@ -25,6 +25,13 @@
   @include tablet {
     padding: 1.5rem 1rem 1.25rem;
   }
+  @include desktop {
+    padding: 2.5rem 1rem 1.25rem;
+  }
+  @include ldesktop {
+    // max-width: 1200px;
+    padding: 2.5rem 1rem 1.25rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,13 +50,18 @@
   @include tablet {
     width: 80%;
   }
+  @include desktop {
+    width: 70%;
+  }
+  @include ldesktop {
+    width: 70%;
+  }
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  // background: rgba(0, 128, 0, .3) !important; //devgreen
 }
 
 
@@ -61,27 +73,53 @@
 
 // !VA accordion__icon -> expander_headline_icon
 .head_header_icon {
+  @include desktop {
+    height: 45px;
+    width: 45px;
+  }
+  @include ldesktop {
+    height: 45px;
+    width: 45px;
+  }
   height: 30px;
   width: 30px;
   // margin-right: .5rem;
   position: relative;
+  top: 0;
 }
 
 // !VA accordion__icon-right -> expander_headline_icon_right
 .head_header_icon_down {
+  @include desktop {
+    top: .638rem;
+    left: .75rem;
+    height: 2.25rem;
+  }
+  @include ldesktop {
+    top: .638rem;
+    left: .75rem;
+    height: 2.25rem;
+  }
   position: absolute;
   // top: -.5rem;
-  top: 0.25rem;
-  left: 1rem;
-  left: .5rem;
+  top: .313rem;
+  left: .75rem;
   height: 1.5rem;
   width: auto;
+  // background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 // !VA accordion__icon-left -> expander_headline_icon_left
 .head_header_icon_right {
+  @include desktop {
+    top: 1.125rem;
+    width: 2.25rem;
+  }
+  @include ldesktop {
+    top: 1.125rem;
+    width: 2.25rem;
+  }
   position: absolute;
-  top: 0;
   top: .813rem;
   left: -5px;
   height: auto;
@@ -113,12 +151,12 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
     line-height: 2.75rem;
   }
   @include desktop {
-    font-size: 1.375rem;
-    line-height: 1.818rem;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
   }
   @include ldesktop {
-    font-size: 1.375rem;
-    line-height: 1.963rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
   color: #8b0000;
   font-family: $monospace_font;
@@ -135,7 +173,7 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
     padding: .5rem .75rem;
   }
   @include desktop {
-    padding: 1rem;
+    padding: .5rem .75rem;
   }
   @include ldesktop {
     padding: 1rem;
@@ -163,8 +201,8 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
     line-height: 2rem;
   }
   @include desktop {
-    font-size: 1.375rem;
-    line-height: 1.818rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   @include ldesktop {
     font-size: 1.375rem;
@@ -187,6 +225,9 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
   @include tablet {
     margin-top: .5rem;
   }
+  @include desktop {
+    margin-top: .5rem;
+  }
   margin: 0;
 }
 
@@ -200,6 +241,11 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
     line-height: 1.5rem;
   }
   @include tablet {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  @include desktop {
+    padding-bottom: .5rem;
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
@@ -218,6 +264,10 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
     width: 6.5rem;
     height: 1.25rem;
   }
+  @include desktop {
+    width: 6.5rem;
+    height: 1.25rem;
+  }
   width: 5rem;
     height: 1rem;
 }
@@ -231,9 +281,9 @@ https://stackoverflow.com/questions/38382153/multiple-classnames-with-css-module
 }
 
 
-// !VA This is the container. The content comes from the Page and is styled with Page.module.scss
+// !VA This is the container. The content comes from the Page and is styled with Page.module.scss. If there's no style defined here, the div will display with the class attribute empty, so just apply the display property to get the module to display the class as Expander_content.
 .content {
-  
+  display: block;
 }
 
 
