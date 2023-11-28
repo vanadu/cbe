@@ -314,6 +314,115 @@
   line-height: 1.25rem;
 }
 
+.grid_fiveeras {
+  @include mphone {
+    width: 320px;
+  }
+  @include lphone {
+    width: 340px;
+  }
+  @include tablet {
+    width: 720px;
+  }
+  @include desktop {
+    width: 600px;
+    margin-right: 40px;
+    padding: 1rem 1rem 1rem 0;
+  }
+  @include ldesktop {
+    width: 840px;
+    padding-right: 80px;
+
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 0;
+  width: 280px;
+}
+
+.grid_fiveeras_rule {  
+  @include mphone {
+    // margin-right: .5rem;
+  }
+  @include lphone {
+    // margin-right: 1rem;
+  }
+  @include tablet {
+    // margin-right: .5rem;
+  }
+  @include desktop {
+    // margin-right: .313rem;
+  }
+  @include ldesktop {
+    // margin-right: 1.75rem;
+  }
+  display: block;
+  width: 100%;
+  margin: .25rem auto;
+  border-width: 0;
+  border-top-width: 1px;
+  border-color: #000;
+  background-color: #000;
+}
+
+.grid_fiveeras_grid {
+  @include tablet {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .375rem;
+  }
+  @include desktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  @include ldesktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .375rem;
+}
+
+.grid_fiveeras_figure {
+  @include mphone {
+    // width: 102px;
+  }
+  @include lphone {
+    // width: 104px;
+  }
+  @include tablet {
+    // width: 108px;
+  }
+  @include desktop {
+    // width: 128px;
+  }
+  @include ldesktop {
+    // width: 146px;
+  }
+  position: relative;
+  // width: 92px;
+}
+
+.grid_fiveeras_img {
+  margin-right: .25rem;
+}
+
+.grid_fiveeras_caption {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background: rgba(0, 0, 0, .6);
+  color: #FFF;
+  font-family: var(--secondary_font);
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
 
 // !VA Home Page - Educate section
 
