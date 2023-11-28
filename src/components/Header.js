@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CBEHeaderBrandingMobile from '../../public/images/img-cbe-branding-mobile.png'
 import CBEHeaderBrandingDesktop from '../../public/images/img-cbe-branding-desktop.png'
+import headerimg from '../../public/images/img-header.png'
 
 // import Branding from '../components/Branding'
-import Navbar from '../components/Navbar'
+import Navbar from './Navbar'
 
 
 import * as styles from '../styles/Header.module.scss'
@@ -40,6 +41,16 @@ const Header = () => {
           </Link>
         </div>
         <Navbar />
+      </div>
+      <div className={styles.header_img_box}>
+        <Image 
+          src={headerimg} 
+          width={2940} 
+          height={200}
+          // sizes="100vw"
+          className={styles.header_img} alt="LarParLife.com" 
+        />
+        
       </div>
       <div className={styles.bottom_bar}>
         {/* <div className={styles.bottom_bar_content}>
