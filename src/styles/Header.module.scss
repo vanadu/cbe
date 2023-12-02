@@ -27,8 +27,10 @@
   align-items: center;
   width: 100%;
   height: 90px;
+  height: 134px;
   z-index: 10;
   background-color: #dceaec;
+  // background-color: #000000;
 }
 
 .top_bar {
@@ -46,8 +48,10 @@
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
-
-}
+  // !VA 2023.11.28
+  opacity: 1;
+  z-index: 1;
+} 
 
 .branding {
   @include mphone {
@@ -68,6 +72,10 @@
   
   }
   width: 140px;
+  // !VA 2023.12.01
+  // width: 100%;
+  width: 126px;
+  height: auto;
   margin: .75rem 0 0 1rem;
 }
 
@@ -104,6 +112,8 @@
     }
 
   display: block;
+  // !VA 2023.12.01
+  width: 100%;
   height: auto;
   // margin: .5rem 0 0 1.25rem;
   // padding: .5rem;
@@ -160,6 +170,7 @@
   margin: .5rem 1rem 0 0;
   // margin: .5rem .5rem 0 0;
   padding: 0;
+  // !VA 2023.12.01
   width: 44px;
 }
 
@@ -193,7 +204,10 @@
   @include lphone {
     width: 54px !important;
   }
+  // !VA 2023.12.01
   width: 40px !important;
+  width: 35px !important;
+
   height: auto;
 }
 
@@ -378,3 +392,257 @@
   color: $light_text_color;
 }
 
+// !VA animateHeader
+
+.header_img_box {
+  @include mphone {
+    // VA!
+    // width: 375px;
+    height: 130px;
+  }
+  @include lphone {
+    // VA!
+    // width: 414px;
+    height: 130px;  
+  }
+  @include tablet {
+    // width: 2058px;
+    height: 140px;
+  }
+  @include desktop {
+    // VA!
+    // width: 2117px;
+    height: 144px;
+  }
+  @include ldesktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .2;
+    height: 190px;
+  }
+  position: absolute;
+  display: block;
+  // !VA 2023.12.01
+  top: 74px;
+  left: 0;
+  opacity: .5;
+  opacity: 1;
+  width: 100%;
+  // !VA 2023.12.01
+  height: 114px;
+  height: 90px;
+  height: 50px;
+  height: 60px; 
+  overflow: hidden;
+  background: black;
+  background: $primary_color;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+// !VA  Image width 1911 - screen width 320;
+@keyframes dogslider {
+  0% {  transform: translateX(0);}
+  // 50% { transform: translateX(-1356px); }
+  50% { transform: translateX(-1356px); }
+  100% {transform: translateX(0);}
+}
+
+// !VA  Image width 1911 - screen width 375;
+@keyframes dogslidermphone {
+  0% {  transform: translateX(0);}
+  50% { transform: translateX(-1536px); }
+  100% {transform: translateX(0);}
+}
+
+@keyframes dogsliderlphone {
+  0% {  transform: translateX(0);}
+  50% { transform: translateX(-1291px); }
+  100% {transform: translateX(0);}
+}
+
+@keyframes dogslidertablet {
+  0% {  transform: translateX(0);}
+  50% { transform: translateX(-951px); }
+  100% {transform: translateX(0);}
+}
+
+@keyframes dogsliderdesktop {
+  0% {  transform: translateX(0);}
+  50% { transform: translateX(-712px); }
+  100% {transform: translateX(0);}
+}
+
+@keyframes dogsliderldesktop {
+  0% {  transform: translateX(0);}
+  50% { transform: translateX(-880px); }
+  100% {transform: translateX(0);}
+}
+
+@keyframes hide-scroll {
+  0% { overflow: hidden; } 
+  100% { overflow: hidden; } 
+}
+
+.header_img, .header_anim {
+  @include mphone {
+  // display: none;
+    width: 1911px;
+    height: 130px;
+    animation: dogslidermphone 200s  infinite;
+
+  }
+  @include lphone {
+    // VA!
+    width: 2058px;
+    height: 130px;   
+    animation: dogsliderlphone 200s  infinite;
+  }
+  @include tablet {
+    // VA!
+    width: 1911px;
+    height: 140px;
+    animation: dogslidertablet 200s  infinite;
+  }
+  @include desktop {
+    // VA!
+    width: 2117px;
+    height: 144px;
+    animation: dogsliderdesktop 180s  infinite;
+  }
+  @include ldesktop {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 2793px;
+    height: 190px;
+    animation: dogsliderldesktop 200s  infinite;
+  }
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: .8;
+  width: 1676px;
+  // !VA 2023.12.01
+  // width: 100%;
+  // width: 320px;
+  // height: 114px;
+  overflow-x: hidden;
+  // !VA 2023.12.01
+  animation: dogslider 200s  infinite;
+  background: rgba(255, 0, 0, .3) !important; //devred
+}
+
+
+
+
+.grid_test {
+  @include mphone {
+    width: 320px;
+  }
+  @include lphone {
+    width: 340px;
+  }
+  @include tablet {
+    width: 720px;
+  }
+  @include desktop {
+    width: 600px;
+    margin-right: 40px;
+    padding: 1rem 1rem 1rem 0;
+  }
+  @include ldesktop {
+    width: 840px;
+    padding-right: 80px;
+
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 0;
+  width: 1676px;
+  height: 120px;
+}
+
+.grid_test_rule {  
+  @include mphone {
+    // margin-right: .5rem;
+  }
+  @include lphone {
+    // margin-right: 1rem;
+  }
+  @include tablet {
+    // margin-right: .5rem;
+  }
+  @include desktop {
+    // margin-right: .313rem;
+  }
+  @include ldesktop {
+    // margin-right: 1.75rem;
+  }
+  display: block;
+  width: 100%;
+  margin: .25rem auto;
+  border-width: 0;
+  border-top-width: 1px;
+  border-color: #000;
+  background-color: #000;
+}
+
+
+// !VA 2023.12.02 This needs to be changed as per what's in the Brick component
+.grid_test_grid {
+  @include tablet {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: .375rem;
+  }
+  @include desktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  @include ldesktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .5rem;
+  }
+  display: grid;
+  // !VA 2023.12.01
+  width: 100%;
+  // width: 1676px;
+  // !VA 2023.12.01
+  height: 120px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .375rem;
+
+  // !VA 2023.12.01
+  display: flex;
+
+
+
+}
+
+// !VA 2023.12.02 brick_img is in the Brick component, remove grid_test_img
+.grid_test_img, .brick_img {
+  width: auto;
+  height: 60px;
+
+  margin-right: .25rem;
+
+}
+
+.grid_test_caption {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background: rgba(0, 0, 0, .6);
+  color: #FFF;
+  // font-family: var(--secondary_font);
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
