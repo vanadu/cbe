@@ -5,13 +5,6 @@ import * as styles from '../styles/Header.module.scss'
 
 const HeaderBrick = ({src, alt}) => {
 
-  console.log('src :>> ');
-  console.log(src);
-
-  console.log('alt :>> ');
-  console.log(alt);
-
-
   return (
     <>
       <Image 

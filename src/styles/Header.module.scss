@@ -298,7 +298,6 @@
   line-height: 1.75rem;
   color: $secondary_link_color;
   font-weight: 500;
-  // background: rgba(255, 0, 0, .3) !important; //devred
   &:hover {
     color: $secondary_hover_color !important;
   } 
@@ -435,8 +434,9 @@
   height: 50px;
   height: 60px; 
   overflow: hidden;
-  background: black;
-  background: $primary_color;
+  // !VA 2023.12.02
+  // background: black;
+  // background: $primary_color;
   overflow-y: scroll !important;
   -webkit-overflow-scrolling: touch;
 }
@@ -533,7 +533,6 @@
   overflow-x: hidden;
   // !VA 2023.12.01
   animation: dogslider 200s  infinite;
-  background: rgba(255, 0, 0, .3) !important; //devred
 }
 
 
@@ -608,14 +607,16 @@
     grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: .5rem;
   }
+  // !VA 2023.12.02
   display: grid;
   // !VA 2023.12.01
   width: 100%;
-  // width: 1676px;
+  // width: 1676px;9
   // !VA 2023.12.01
   height: 120px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .375rem;
+  // !VA 2023.12.02
+  // gap: .375rem;
 
   // !VA 2023.12.01
   display: flex;
@@ -626,10 +627,10 @@
 
 // !VA 2023.12.02 brick_img is in the Brick component, remove grid_test_img
 .grid_test_img, .brick_img {
-  width: auto;
+  width: au;
   height: 60px;
-
-  margin-right: .25rem;
+  // !VA Gutter between images
+  margin-right: .188rem;
 
 }
 
