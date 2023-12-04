@@ -29,9 +29,9 @@ export default function Header() {
             <div className={styles.mobile_menu_arrow}>
               <Image 
                 src={MobileMenuArrow}
-                // width="0"
-                // height="0"
-                // sizes="100vw"
+                width="0"
+                height="0"
+                sizes="100vw"
                 className={styles.mobile_menu_arrow_svg}
                 alt=""/>
             </div>
@@ -81,12 +81,7 @@ export default function Header() {
               </li>
             </ul>
           </div>
-
-
-          
         </section>
-
-        
         <section className={styles.desktop_menu}>
 
           <ul className={styles.desktop_menu_list}>

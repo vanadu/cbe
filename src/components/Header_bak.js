@@ -57,109 +57,38 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.top_bar}>
-
-
-
         <div className={styles.branding}>
-            <Link 
-              href='/'
-              className={styles.branding_mobile_link}
-            >
-              <Image 
-                src={CBEHeaderBrandingMobile} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-                className={styles.branding_mobile_img} alt="XXX"
-                />
-            </Link>
-            <Link href='/'>
-              <Image 
-                src={CBEHeaderBrandingDesktop} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                // style={{ width: '100%', height: 'auto' }}
-                className={styles.branding_desktop} alt="XXX"
-                />
-            </Link>
-          </div>
-          <Navbar />
-
+          <Link 
+            href='/'
+            className={styles.branding_mobile_link}
+          >
+            <Image 
+              src={CBEHeaderBrandingMobile} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_mobile_img} alt="XXX"
+              />
+          </Link>
+          <Link href='/'>
+            <Image 
+              src={CBEHeaderBrandingDesktop} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              // style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_desktop} alt="XXX"
+              />
+          </Link>
+        </div>
+        <Navbar />
       </div>
-
-
-
       <div className={styles.header_img_box}>
-        {/* <div className={styles.header_anim}> */}
+        <div className={styles.header_anim}>
 
 
-            <div className={styles.tech_slideshow}>
-              <div className={styles.mover_1}>
-
-                <div className={styles.grid_test_grid}>
-                    
-                    <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
-                    <HeaderBrick src={Calypso} alt="Wreck of the Calypso" />
-                    <HeaderBrick src={JohnFitch} alt="First Steamboat 1789" />
-                    <HeaderBrick src={CharleyPatton} alt="Charley Patton" />
-                    <HeaderBrick src={Bales} alt="9226 Bales of Cotton" />
-                    <HeaderBrick src={LoadingRiverboats} alt="Loading Riverboats on the Mississippi" />
-                    
-                    
-                    <HeaderBrick src={RiverboatDisaster} alt="Mississippi Riverboat Disaster" />
-                    <HeaderBrick src={GreenvilleTogether} alt="Greenville Mississippi Flood" />
-
-
-
-                    <HeaderBrick src={SonHouse} alt="Son House" />
-                    <HeaderBrick src={HorseDrawnTrain} alt="Horse-Drawn Train" />
-                    <HeaderBrick src={BridgeTrainWreck} alt="Bridge Train Wreck" />
-                    <HeaderBrick src={EarlyLocomotive1} alt="Steam Locomotive around 1900" />
-                    <HeaderBrick src={EarlyLocomotive2} alt="Steam Locomotive around 1905" />
-                    <HeaderBrick src={LayingRails} alt="Laying Rails" />
-                    <HeaderBrick src={SouthMoorWreck} alt="South Moor Wreck" />
-                    <HeaderBrick src={FastestSteamLoc} alt="Fastest Steam Locomotive" />
-                    <HeaderBrick src={SkipJames} alt="Skip James" />
-                    <HeaderBrick src={CarBridgeWreck} alt="Early Car Wreck on Bridge" />
-                    <HeaderBrick src={EdisonElectricCar} alt="Edison Electric Car" />
-                    <HeaderBrick src={FlattenedWheels} alt="Car Wreck With Flattened Wheels" />
-                    <HeaderBrick src={TrouveTricycle} alt="Trouve Electric Tricycle" />
-                    <HeaderBrick src={FordFirstCar} alt="Henry Ford's First Car" />
-                    <HeaderBrick src={WallaceElectricCar} alt="Wallace Electric Car" />
-                    <HeaderBrick src={DrivingFashion} alt="Early Driving Fashion" />
-                    <HeaderBrick src={BukkaWhite} alt="Bukka White" />
-                    <HeaderBrick src={BoeingFirst} alt="Boeing First Commercial Flight" />
-                    <HeaderBrick src={DorandTriplane} alt="Dorand Triplane 1908" />
-                    <HeaderBrick src={Hindenberg} alt="Hindenberg Disaster 1937" />
-                    <HeaderBrick src={KatherineStinson} alt="Katherine Stinson 1913" />
-                    <HeaderBrick src={PompeienPiraud} alt="Pompeien-Piraud Airship" />
-                    <HeaderBrick src={MuddyWaters} alt="Muddy Waters" />
-                    <HeaderBrick src={ConvairFlyingCar} alt="Convair Flying Car" />
-                    <HeaderBrick src={Dequevillay} alt="D'Equevillay Flying Machine 1908" />
-                    <HeaderBrick src={WrightBros} alt="Wright Brothers 1902" />
-
-
-
-                    <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
-                    <HeaderBrick src={Calypso} alt="Wreck of the Calypso" />
-                    <HeaderBrick src={JohnFitch} alt="First Steamboat 1789" />
-                    <HeaderBrick src={CharleyPatton} alt="Charley Patton" />
-                    <HeaderBrick src={Bales} alt="9226 Bales of Cotton" />
-                    <HeaderBrick src={LoadingRiverboats} alt="Loading Riverboats on the Mississippi" />
-                    <HeaderBrick src={RiverboatDisaster} alt="Mississippi Riverboat Disaster" />
-
-                </div>
-
-
-              </div>
-            </div>
-
-
-
-
-            {/* <div className={styles.grid_test_grid}>
+            <div className={styles.grid_test_grid}>
               
               <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
               <HeaderBrick src={LeveeBreach} alt="Mississippi Levee Breach 1927" />
@@ -202,13 +131,19 @@ const Header = () => {
 
 
 
-            </div> */}
+            </div>
 
-        {/* </div> */}
+        </div>
       </div>
-      {/* <div className={styles.bottom_bar}>
-
-      </div> */}
+      <div className={styles.bottom_bar}>
+        {/* <div className={styles.bottom_bar_content}>
+          <h2>inspire</h2>
+          <h2>&bull;</h2>
+          <h2>educate</h2>
+          <h2>&bull;</h2>
+          <h2>engage</h2>
+        </div> */}
+      </div>
     </div>
   )
 }
