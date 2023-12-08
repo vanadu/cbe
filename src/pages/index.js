@@ -17,8 +17,7 @@ import MuddyWaters from '../../public/images/landing-img-muddy-waters.jpg'
 import BukkaWhite from '../../public/images/landing-img-bukka-white.jpg'
 import FiveEras from '../../public/images/img-five-eras-squares.png'
 import EngageGif from '../../public/images/gif-home-engage.gif'
-import AcmeGuitars from '../../public/images/img-acme-guitars.jpg'
-import HohnerHarps from '../../public/images/img-hohner-harps.jpg'
+
 
 import * as styles from '../styles/Pages.module.scss'
 
@@ -118,7 +117,7 @@ function Home() {
               From early rock and roll, to the Beatles and the British invasion, to the Woodstock generation, to what&rsquo;s now known as &lsquo;classic rock&rsquo; &mdash; if it hadn&rsquo;t been for Mississippi Delta blues, popular music of the late 20th century as we know it may never have come to pass. 
             </p> */}
             <p className={styles.content_text}>
-              Crossroads Blues Experience celebrates the pre-electric roots of the blues highlights the promise of America where, no matter what your heritage or background, you can touch people&rsquo;s lives in a positive way &mdash; and maybe even change the world.
+              Crossroads Blues Experience celebrates the pre-electric roots of the blues and highlights the promise of America where, no matter what your heritage or background, you can touch people&rsquo;s lives in a positive way and make the world a better place.
             </p>
           </Expander> 
 
@@ -157,7 +156,7 @@ function Home() {
 
           <Expander
             title='engage'
-            text='...audiences young and old with a multi&#8209;stream performance merging music, media, and&nbsp;narrative.'
+            text='...audiences with a multi&#8209;stream performance merging music, media, and&nbsp;narrative.'
             index={3}
             activeExpanderIndex={activeExpanderIndex}
             setActiveExpanderIndex={setActiveExpanderIndex}
@@ -196,62 +195,7 @@ function Home() {
           <SeparatorDots />
         </div>
 
-        <div className={styles.home_content}>
-          <div className={styles.home_content_heading}>
-            <h1 className={styles.home_content_heading_h1}>What is the <span className={styles.primary_color}>Crossroads Blues&nbsp;Experience</span>?</h1>
-          </div>
-          <p className={styles.content_text}>
-            <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is a live performance/multimedia program for people of all ages. Originally conceived as a program for schools, <span className={styles.semibold}>CBE</span> now performs at public venues where all ages can come together to share in the experience of our American story.  
-          </p>
-          <p className={styles.content_text}>
-          <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> fills a need for parents, grandparents, guardians &mdash; or even siblings &mdash; to experience live music together in a safe, moderate-volume environment with a program that crosses generational and cultural divides and educates as well as entertains.
-          </p>
-          <h2 className={styles.home_content_heading_h2}>Why Blues Music?</h2>
-          <p className={styles.content_text}>
-            Before electric guitars and amplification, people of the South were using whatever instruments they could get their hands on to create and play blues music.
-          </p>
-          <div className={styles.flex_center}>
-            <figure className={styles.figure_two_up}>
-              <Image 
-                src={AcmeGuitars} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                // style={{ width: '100%', height: 'auto' }}
-                className={styles.figure_two_up_image} alt="Acme Guitars" 
-              />
-              <Image 
-                src={HohnerHarps} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                // style={{ width: '100%', height: 'auto' }}
-                className={styles.figure_two_up_image} alt="Hohner Harmonicas" 
-              />
-            </figure>
-          </div>
-          <p className={styles.content_text}>
-             From Texas to Appalachia, each region developed a distinct character of the blues. What they all share is a driving rhythm, a common ancestry, and an essence that is deeply rooted in the American experience.
-          </p>
-          <p className={styles.content_text}>
-          <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is dedicated to bringing historically-accurate blues music to live audiences so that new generations of Americans can connect with our shared heritage and carry the blues tradition forward.
-          </p>
-          <h2 className={styles.home_content_heading_h2}>Our Program</h2>
-          <p className={styles.content_text}>
-            To learn more about our program, visit the <Link href='/program' className={styles.link_secondary}>Program</Link> page.
-          </p>
-          <h2 className={styles.home_content_heading_h2}>Performers</h2>
-          <p className={styles.content_text}>
-            To find out about our performers, visit the <Link href='/about' className={styles.link_secondary}>About</Link> page.
-          </p>
-          <h2 className={styles.home_content_heading_h2}>Contact</h2>
-          <p className={styles.content_text}>
-            To learn how you can support <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> or engage us to perform at your school, church or venue, visit the <Link href='/contact' className={styles.link_secondary}>Contact</Link> page.
-          </p>
-          <p className={styles.content_text}>
-            Thanks for visiting and thanks for supporting the <span className={styles.primary_color}><span className={styles.semibold}>Crossroads Blues&nbsp;Experience</span></span>
-          </p>
-        </div>
+
 
 
       </section>

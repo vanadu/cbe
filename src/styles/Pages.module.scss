@@ -2,6 +2,16 @@
 @import 'variables.scss';
 @import './mixins/mediaqueries.scss';
 
+// !VA Typography
+.semibold_italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.italic {
+  font-style: italic;
+}
+
 
 // !VA Placeholder style
 .placeholder {
@@ -35,18 +45,15 @@
     background-size: 180%;
   }
   @include ldesktop {
-    height: 100vh;
     background-image: url('../../public/images/landing-bg.jpg');
     background-position: center top;
     background-size: cover;
   }
-  // height: 100vh;
   min-height: 420px;
   padding-bottom: .75rem;
   background-image: url('../../public/images/landing-bg.jpg');
   background-repeat: no-repeat;
   background-position: -380px 0px;
-  
   background-position: -360px center;
   background-attachment: fixed;
   background-size: cover;
@@ -115,6 +122,10 @@
 .figure_two_up {
   @include tablet {
     width: 80%;
+    padding: 1rem 0;
+  }
+  @include desktop {
+    width: 74%;
     padding: 1rem 0;
   }
   display: flex;
@@ -199,7 +210,7 @@
 
 .home_content {
   @include ldesktop {
-    max-width: 1000px;
+    max-width: 1200px;
   }
   width: 100%;
 }
@@ -491,7 +502,158 @@
 //   background: rgba(0, 0, 255, .3) !important; //devblue
 // }
 
+// !VA PROGRAM PAGE
 
+.program_head {
+  @include tablet {
+    margin: 1.5rem 0 1rem;
+  }
+  @include desktop {
+    margin: 1.5rem 0 1rem;
+  }
+  @include ldesktop {
+    margin: 1.5rem 0 2rem;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 .5rem;
 
+}
+
+// // !VA Replacing this image logo with a text logo for SEO
+.program_branding_logo {
+  // !VA Not used yet
+}
+
+.program_head_branding {
+  @include mphone {
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+  }
+  @include lphone {
+    font-size: 1.438rem;
+    line-height: 1.638rem;
+  }
+  @include tablet {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  @include desktop {
+    margin-bottom: .125rem;
+    font-size: 2.25rem;
+    line-height: 2.638rem;
+  }
+  @include ldesktop {
+    margin: .75rem 0 .25rem;
+    font-size: 2.75rem;
+    line-height: 2.638rem;
+  }
+  color: $primary_color;
+  font-family: $secondary_font;
+  font-size: 1.188rem;
+  line-height: 1.375rem;
+}
+
+.program_head_slug {
+  @include mphone {
+    font-size: 1.063rem;
+    line-height: 1.375rem;
+    letter-spacing: .22rem;
+  }
+  @include lphone {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: .22rem;
+  }
+  @include tablet {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: .33rem;
+  }
+  @include desktop {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: .47rem;
+  }
+  @include ldesktop {
+    margin-left: .25rem;
+    font-size: 1.813rem;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: .6rem;
+  }
+  color: $secondary_color;
+  font-family: $monospace_font;
+  font-size: .938rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: .17rem;
+}
+
+.program_head_rule {
+  @include mphone {
+    width: 90%;
+  }
+  @include lphone {
+    width: 85%;
+  }
+  @include tablet {
+    width: 396px;
+  }
+  @include desktop {
+    width: 450px;
+  }
+  @include ldesktop {
+    width: 620px;
+  }
+  display: block;
+  width: 94%;
+  margin: .25rem auto;
+  border-width: 0;
+  border-top-width: .063rem;
+  border-color: $secondary_color;
+  background-color: $secondary_color;
+  opacity: .3;
+}
+
+.program_heading {
+  @include mphone {
+    margin: 1rem 0 .25rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  @include lphone {
+    margin: 1rem 0 .25rem;
+    font-size: 1.188rem;
+    line-height: 1.438rem;
+  }
+  @include tablet {
+    margin: 1.5rem 0 .5rem;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
+  }
+  @include desktop {
+    margin: 1.5rem 0 .5rem;
+    font-size: 1.377rem;
+    line-height: 1.638rem;
+  }
+  @include ldesktop {
+    margin: 1.5rem 0 .5rem;
+    font-size: 1.813rem;
+    line-height: 1.638rem;
+  }
+  margin: .75rem 0 0;
+  color: $primary_color;
+  font-family: $secondary_font;
+  font-family: $primary_font;
+  font-size: 1.063rem;
+  line-height: 1.375rem;
+}
+
+.secondary_color {
+  color: $secondary_color;
+}
 
 
