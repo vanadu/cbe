@@ -84,7 +84,7 @@ const Header = () => {
         </div>
         <Navbar />
       </div>
-      <div className={styles.header_img_box}>
+      <div className={styles.bricks_container}>
         <div className={styles.header_anim}>
 
 

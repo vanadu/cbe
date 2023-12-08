@@ -42,7 +42,7 @@ const Expander = ({
 
   return (
     <>
-      <div className={styles.main}
+      <div className={styles.block_container}
         ref={expanderRef}
         >
 
@@ -51,57 +51,57 @@ const Expander = ({
             onClick={() => handleSetIndex(index)}
             className={styles.block}
             >
-            <div className={styles.head}>
+            <div className={styles.content}>
 
-              <div className={styles.head_header}>
-                <div className={styles.head_header_icon}>
-                  {activeExpanderIndex === index ? (
-                    <Image 
-                      src={RedDownArrow} 
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      // style={{ width: '40px', height: 'auto' }}
-                      className={styles.head_header_icon_right} alt="XXX" 
-                    />
-                  ) : (
-                    <Image 
-                      src={RedRightArrow} 
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      // style={{ width: '12px', height: 'auto' }}ddd
-                      className={styles.head_header_icon_down} alt="XXX" 
-                    />
-                  )}
+              <div className={styles.head}>
+                <div className={styles.head_headline}>
+                  <div className={styles.head_headline_icon}>
+                    {activeExpanderIndex === index ? (
+                      <Image 
+                        src={RedDownArrow} 
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        // style={{ width: '40px', height: 'auto' }}
+                        className={styles.head_headline_icon_right} alt="XXX" 
+                      />
+                    ) : (
+                      <Image 
+                        src={RedRightArrow} 
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        // style={{ width: '12px', height: 'auto' }}ddd
+                        className={styles.head_headline_icon_down} alt="XXX" 
+                      />
+                    )}
+                  </div>
+                  <h3 className={styles.head_headline_text}>{title}
+                  </h3>
                 </div>
-                <h3 className={styles.head_header_heading}>{title}
-                </h3>
-              </div>
-
-              <div className={styles.head_content}>
-                <p className={styles.head_content_text}>
+                <p className={styles.head_text}>
                   {text}
                 </p>
-                <div className={`${styles.head_content_learnmore} ${activeExpanderIndex === index ? styles.hide_learnmore : ''}`}>
-                  <h4 className={styles.head_content_learnmore_text}>
-                    Learn More
-                  </h4>
-                  <Image 
-                    src={GoldDownArrow} 
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    // style={{ width: '100%', height: 'auto' }}
-                    className={styles.head_content_learnmore_icon} alt="Learn more..." 
-                  />
-                </div>
+              </div>
+
+              <div className={`${styles.learnmore} ${activeExpanderIndex === index ? styles.hide_learnmore : ''}`}>
+                <h4 className={styles.learnmore_text}>
+                  Learn More
+                </h4>
+                <Image 
+                  src={GoldDownArrow} 
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  // style={{ width: '100%', height: 'auto' }}
+                  className={styles.learnmore_icon} alt="Learn more..." 
+                />
               </div>
             </div>
 
             {activeExpanderIndex === index && (
               <div 
-                className={styles.content}
+                className={styles.children}
               >
                 {children}
   

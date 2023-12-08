@@ -1,4 +1,6 @@
 @import 'variables.scss';
+figure-o-loaded-or-not-ithink-it-score > {
+}
 @import './mixins/mediaqueries.scss';
 
 // !VA Logo is in /Branding
@@ -25,14 +27,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // align-items: c80enter;
+  align-items: center;
   width: 100%;
-  // height: 90px;
-  // !VA 2023.12.04 Defines position of the yellow separator 
-  // height: 134px;
   z-index: 10;
   background-color: #dceaec;
-  // background-color: #000000;
 }
 
 .top_bar {
@@ -50,11 +48,12 @@
   }
   @include ldesktop {
     justify-content: space-between;
+    padding: 1rem 3rem .75rem;
   }
   position: relative;
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  // max-width: 1200px;
   justify-content: space-between;
   // !VA 2023.11.28
   padding: .75rem .75rem .5rem .75rem;
@@ -336,278 +335,140 @@
   border-bottom: 8px solid var(--primary_icon-color); */
 }
 
-.bottom_bar {
-    @include tablet {
-      height: 2px;
-    }
-    @include desktop {
-      height: 2px;
-    }
-    @include ldesktop {
-      height: 2px;
-    }
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 2px;
-  // height: 1.25rem;
-  background-color: $primary_accent_color;
-}
+// !VA 2023.12.05 Bottom bar is gone...
+// .bottom_bar {
+//     @include tablet {
+//       height: 2px;
+//     }
+//     @include desktop {
+//       height: 2px;
+//     }
+//     @include ldesktop {
+//       height: 2px;
+//     }
+//   position: absolute;
+//   bottom: 0;
+//   display: flex;
+//   justify-content: space-evenly;
+//   width: 100%;
+//   height: 2px;
+//   // height: 1.25rem;
+//   background-color: $primary_accent_color;
+// }
 
-.bottom_bar_content {
-  @include tablet {
-    
-  }
-  display: none;
-  justify-content: space-evenly;
-  width: 100%;
-  max-width: 1200px;
-}
+// !VA 2023.12.05 Bottombar deleted
 
-// !VA This has gone away
-.bottom_bar h2 {
-    @include mphone {
-      font-size: 1.063rem;
-    }
-    @include lphone {
-      font-size: 1.125rem;
-    }
-    @include tablet {
-      font-size: 1.5rem;
-    }
-    @include desktop {
-      font-size: 1.75rem;
-      line-height: 1.75rem;
-    }
-    @include ldesktop {
-      font-size: 1.75rem;
-      line-height: 2rem;
-    }
-  display: none;
-  padding-bottom: .125rem;
-  font-family: "Inconsolata";
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  // font-stretch: expanded;
-  // font-stretch: 140%;
-  color: $light_text_color;
-}
-
-// !VA animateHeader
-
-.header_img_box {
+.bricks_container {
   @include mphone {
     // VA!
     // width: 375px;
-    height: 84px; 
+    height: 88px; 
   }
   @include lphone {
     // VA!
     // width: 414px;
-    height: 104px;
+    height: 108px;
   }
   @include tablet {
     // width: 2058px;
-    height: 134px;
+    height: 136px;
   }
   @include desktop {
     // VA!
     height: 136px;
   }
   @include ldesktop {
-    height: 140px;
+    // !VA 2023.12.05 Trying to get rid of the vertical scrollbar
+    height: 144px;
   }
   position: relative;
   display: block;
   opacity: 1;
   width: 100%;
-  height: 60px; 
-  overflow: hidden;
-  overflow-y: scroll !important;
-  -webkit-overflow-scrolling: touch;
+  height: 64px; 
+  overflow: hidden; 
   background: $primary_accent_color;
+  // z-index: -1;
 }
 
-
-
-
-
-// .grid_test {
-//   @include mphone {
-//     width: 320px;
-//   }
-//   @include lphone {
-//     width: 340px;
-//   }
-//   @include tablet {
-//     width: 720px;
-//   }
-//   @include desktop {
-//     width: 600px;
-//     margin-right: 40px;
-//     padding: 1rem 1rem 1rem 0;
-//   }
-//   @include ldesktop {
-//     width: 840px;
-//     padding-right: 80px;
-
-//   }
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 0 1rem 0 0;
-//   width: 1676px;
-//   height: 120px;
-// }
-
-// .grid_test_rule {  
-//   @include mphone {
-//     // margin-right: .5rem;
-//   }
-//   @include lphone {
-//     // margin-right: 1rem;
-//   }
-//   @include tablet {
-//     // margin-right: .5rem;
-//   }
-//   @include desktop {
-//     // margin-right: .313rem;
-//   }
-//   @include ldesktop {
-//     // margin-right: 1.75rem;
-//   }
-//   display: block;
-//   width: 100%;
-//   margin: .25rem auto;
-//   border-width: 0;
-//   border-top-width: 1px;
-//   border-color: #000;
-//   background-color: #000;
-// }
-
-
-// !VA 2023.12.02 This needs to be changed as per what's in the Brick component
-.grid_test_grid {
-  // @include tablet {
-  //   grid-template-columns: repeat(6, minmax(0, 1fr));
-  //   gap: .375rem;
+// !VA 2023.12.05 This was never implemented...
+.bricks_slider {
+  // @include mphone {
+  //   max-width: 375px;
   // }
-  // @include desktop {
-  //   grid-template-columns: repeat(6, minmax(0, 1fr));
-  //     gap: .5rem;
-  // }
-  // @include ldesktop {
-  //   grid-template-columns: repeat(6, minmax(0, 1fr));
-  //     gap: .5rem;
-  // }
-  // !VA 2023.12.02
-  // display: grid;
-  // !VA 2023.12.01
-  width: 100%;
-  // width: 1676px;9
-  // !VA 2023.12.01
-  // height: 120px;
-  // grid-template-columns: repeat(3, minmax(0, 1fr));
-  // !VA 2023.12.02
-  // gap: .375rem;
-
-  // !VA 2023.12.01
-  display: flex;
-
-
-
-}
-
-// !VA 2023.12.02 brick_img is in the Brick component, remove grid_test_img
-.grid_test_img, .brick_img {
-  @include mphone {
-    height: 84px;
-  }
-  @include lphone {
-    height: 104px;
-  }
-  @include tablet {
-    height: 132px;
-  }
-  @include desktop {
-    height: 132px;
-  }
+  // max-width: 414px;
+  // height: 60px;
+  // max-width: 800px;
+  // max-width: 320px;
+  // margin: 0 auto;
+  // position: relative;
+  // overflow: hidden;
+  // transform: translate3d(0, 0, 0);
+  // overflow: hidden;
+  display: block;
   @include ldesktop {
-    height: 140px;
-    margin-right: .188rem;
+    // width: 8600px;
   }
-  width: auto;
-  height: 60px;
-  // !VA Gutter between images
-  margin-right: .188rem;
-  margin-top: .5rem;
-  margin: 2px .125rem 2px 0;
-}
-
-.grid_test_caption {
-  position: absolute;
-  bottom: 3px;
-  width: 100%;
-  padding-top: 2px;
-  padding-bottom: 3px;
-  background: rgba(0, 0, 0, .6);
-  color: #FFF;
-  // font-family: var(--secondary_font);
-  font-size: .875rem;
-  font-weight: 300;
-  line-height: 1.25rem;
+  background: rgba(0, 0, 255, .3) !important; //devblue
 }
 
 
-
-.tech-slideshow {
-  @include mphone {
-    max-width: 375px;
-  }
-  max-width: 414px;
-  height: 60px;
-  max-width: 800px;
-  max-width: 320px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-
-.tech_slideshow > div {
-  // width: 2653px;
-  // width: 3253px;
-  // width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-}
-.tech_slideshow .mover_1 {
+.bricks_slider .bricks {
   @include tablet {
     animation: moveSlideshow 360s linear infinite;
   }
-  animation: moveSlideshow 120s linear infinite;
+  @include desktop {
+    animation: desktopMoveSlideshow 360s linear infinite;
+  }
+  @include ldesktop {
+    animation: lDesktopMoveSlideshow 360s linear infinite;
+  }
+  display: flex;
+  position: absolute;
   height: auto;
+  // !VA 2023.12.05 Didn't work
+  height: 64px;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow 240s linear infinite;
 }
-// .tech_slideshow .mover-2 {
-//   opacity: 0;
-//   transition: opacity 0.5s ease-out;
-//   background-position: 0 -200px;
-//   animation: moveSlideshow 15s linear infinite;
-// }
-.tech_slideshow:hover .mover-2 {
-  opacity: 1;
+
+// !VA Stop animation on hover
+.bricks:hover, .bricks:focus {
+  cursor: pointer;
+  animation-play-state: paused;
 }
 
 @keyframes moveSlideshow {
   100% { 
-    transform: translateX(-66.6666%);  
-    transform: translateX(-84.2%);  
+    // !VA Initial from the demo, see links in OneNote CSS notebook
+    // transform: translateX(-66.6666%);  
+    transform: translateX(-84.1%);  
   }
+}
+
+@keyframes desktopMoveSlideshow {
+  100% { 
+    transform: translateX(-82.2%);  
+  }
+}
+
+@keyframes lDesktopMoveSlideshow {
+  100% { 
+    transform: translateX(-71.7%);  
+  }
+}
+
+// !VA 2023.12.02 brick_img is in the Brick component
+.brick_img {
+  display: block;
+  width: auto;
+  // !VA Height is defined in bricks_container
+  height: 100%;
+  // !VA Exposes the primary_accent_color background of the parent
+  padding: 2px .125rem 2px 0;
+}
+
+.ldesktop_brick_img {
+  display: none;
 }

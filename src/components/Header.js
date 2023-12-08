@@ -8,17 +8,17 @@ import headerimg from '../../public/images/img-header.png'
 import HeaderBrick from '../components/HeaderBrick'
 
 
-import RobertJohnson from '../../public/images/landing-img-robert-johnson.jpg'
-import CharleyPatton from '../../public/images/landing-img-charley-patton.jpg'
-import SonHouse from '../../public/images/landing-img-son-house.jpg'
-import SkipJames from '../../public/images/landing-img-skip-james.jpg'
-import MuddyWaters from '../../public/images/landing-img-muddy-waters.jpg'
-import BukkaWhite from '../../public/images/landing-img-bukka-white.jpg'
+import RobertJohnson from '../../public/images/bricks/img-brick-robert-johnson.png'
+import CharleyPatton from '../../public/images/bricks/img-brick-charley-patton.png'
+import SonHouse from '../../public/images/bricks/img-brick-son-house.png'
+import SkipJames from '../../public/images/bricks/img-brick-skip-james.png'
+import MuddyWaters from '../../public/images/bricks/img-brick-muddy-waters.png'
+import BukkaWhite from '../../public/images/bricks/img-brick-bukka-white.png'
 import LeveeBreach from '../../public/images/bricks/img-brick-levee-breach.png'
 import Bales from '../../public/images/bricks/img-brick-9226-bales.png'
 import Calypso from '../../public/images/bricks/img-brick-calypso-wreck.png'
 import JohnFitch from '../../public/images/bricks/img-brick-john-fitch.png'
-import LoadingRiverboats from '../../public/images/bricks/img-brick-levee-breach.png'
+import LoadingRiverboats from '../../public/images/bricks/img-brick-loading-riverboats.png'
 import RiverboatDisaster from '../../public/images/bricks/img-brick-riverboat-disaster.png'
 import GreenvilleTogether from '../../public/images/bricks/img-brick-greenville-together.png'
 import HorseDrawnTrain from '../../public/images/bricks/img-brick-horse-drawn-train.png'
@@ -58,157 +58,98 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.top_bar}>
 
-
-
         <div className={styles.branding}>
-            <Link 
-              href='/'
-              className={styles.branding_mobile_link}
-            >
-              <Image 
-                src={CBEHeaderBrandingMobile} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-                className={styles.branding_mobile_img} alt="XXX"
-                />
-            </Link>
-            <Link href='/'>
-              <Image 
-                src={CBEHeaderBrandingDesktop} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                // style={{ width: '100%', height: 'auto' }}
-                className={styles.branding_desktop} alt="XXX"
-                />
-            </Link>
+          <Link 
+            href='/'
+            className={styles.branding_mobile_link}
+          >
+            <Image 
+              src={CBEHeaderBrandingMobile} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_mobile_img} alt="XXX"
+              />
+          </Link>
+          <Link href='/'>
+            <Image 
+              src={CBEHeaderBrandingDesktop} 
+              width="0"
+              height="0"
+              sizes="100vw"
+              // style={{ width: '100%', height: 'auto' }}
+              className={styles.branding_desktop} alt="XXX"
+              />
+          </Link>
+        </div>
+        <Navbar />
+
+      </div>
+
+      <div className={styles.bricks_container}>
+
+        <div className={styles.bricks_slider}>
+          <div className={styles.bricks}>
+                
+            <HeaderBrick src={RobertJohnson} className={styles.brick_img} alt="Robert Johnson" />
+            <HeaderBrick src={Calypso} className={styles.brick_img} alt="Wreck of the Calypso" />
+            <HeaderBrick src={JohnFitch} className={styles.brick_img} alt="First Steamboat 1789" />
+            <HeaderBrick src={CharleyPatton} className={styles.brick_img} alt="Charley Patton" />
+            <HeaderBrick src={Bales} className={styles.brick_img} alt="9226 Bales of Cotton" />
+            <HeaderBrick src={LeveeBreach} className={styles.brick_img} alt="Mississippi Levee Breach 1927" />
+            <HeaderBrick src={RiverboatDisaster} className={styles.brick_img} alt="Mississippi Riverboat Disaster" />
+            <HeaderBrick src={LoadingRiverboats} className={styles.brick_img} alt="Loading Riverboats on the Mississippi" />
+            {/* Unique bricks */}
+            <HeaderBrick src={GreenvilleTogether} className={styles.brick_img} alt="Greenville Mississippi Flood" />
+            <HeaderBrick src={SonHouse} className={styles.brick_img} alt="Son House" />
+            <HeaderBrick src={HorseDrawnTrain} className={styles.brick_img} alt="Horse-Drawn Train" />
+            <HeaderBrick src={BridgeTrainWreck} className={styles.brick_img} alt="Bridge Train Wreck" />
+            <HeaderBrick src={EarlyLocomotive1} className={styles.brick_img} alt="Steam Locomotive around 1900" />
+            <HeaderBrick src={EarlyLocomotive2} className={styles.brick_img} alt="Steam Locomotive around 1905" />
+            <HeaderBrick src={LayingRails} className={styles.brick_img} alt="Laying Rails" />
+            <HeaderBrick src={SouthMoorWreck} className={styles.brick_img} alt="South Moor Wreck" />
+            <HeaderBrick src={FastestSteamLoc} className={styles.brick_img} alt="Fastest Steam Locomotive" />
+            <HeaderBrick src={SkipJames} className={styles.brick_img} alt="Skip James" />
+            <HeaderBrick src={CarBridgeWreck} className={styles.brick_img} alt="Early Car Wreck on Bridge" />
+            <HeaderBrick src={EdisonElectricCar} className={styles.brick_img} alt="Edison Electric Car" />
+            <HeaderBrick src={FlattenedWheels} className={styles.brick_img} alt="Car Wreck With Flattened Wheels" />
+            <HeaderBrick src={TrouveTricycle} className={styles.brick_img} alt="Trouve Electric Tricycle" />
+            <HeaderBrick src={FordFirstCar} className={styles.brick_img} alt="Henry Ford's First Car" />
+            <HeaderBrick src={WallaceElectricCar} className={styles.brick_img} alt="Wallace Electric Car" />
+            <HeaderBrick src={DrivingFashion} className={styles.brick_img} alt="Early Driving Fashion" />
+            <HeaderBrick src={BukkaWhite} className={styles.brick_img} alt="Bukka White" />
+            <HeaderBrick src={BoeingFirst} className={styles.brick_img} alt="Boeing First Commercial Flight" />
+            <HeaderBrick src={DorandTriplane} className={styles.brick_img} alt="Dorand Triplane 1908" />
+            <HeaderBrick src={Hindenberg} className={styles.brick_img} alt="Hindenberg Disaster 1937" />
+            <HeaderBrick src={KatherineStinson} className={styles.brick_img} alt="Katherine Stinson 1913" />
+            <HeaderBrick src={PompeienPiraud} className={styles.brick_img} alt="Pompeien-Piraud Airship" />
+            <HeaderBrick src={MuddyWaters} className={styles.brick_img} alt="Muddy Waters" />
+            <HeaderBrick src={ConvairFlyingCar} className={styles.brick_img} alt="Convair Flying Car" />
+            <HeaderBrick src={Dequevillay} className={styles.brick_img} alt="D'Equevillay Flying Machine 1908" />
+            <HeaderBrick src={WrightBros} className={styles.brick_img} alt="Wright Brothers 1902" />
+            {/* REPEATS for animation */}
+            <HeaderBrick src={RobertJohnson} className={styles.brick_img} alt="Robert Johnson" />
+            <HeaderBrick src={Calypso} className={styles.brick_img} alt="Wreck of the Calypso" />
+            <HeaderBrick src={JohnFitch} className={styles.brick_img} alt="First Steamboat 1789" />
+            <HeaderBrick src={CharleyPatton} className={styles.brick_img} alt="Charley Patton" />
+            <HeaderBrick src={Bales} className={styles.brick_img} alt="9226 Bales of Cotton" />
+            <HeaderBrick src={LeveeBreach} className={styles.brick_img} alt="Mississippi Levee Breach 1927" />
+            <HeaderBrick src={RiverboatDisaster} className={styles.brick_img} alt="Mississippi Riverboat Disaster" />
+            <HeaderBrick src={LoadingRiverboats} className={styles.brick_img} alt="Loading Riverboats on the Mississippi" />
+            {/* Desktop */}
+            <HeaderBrick src={GreenvilleTogether} className={styles.ldesktop_brick_img} alt="Greenville Mississippi Flood" />
+            <HeaderBrick src={SonHouse} className={styles.ldesktop_brick_img} alt="Son House" />
+            <HeaderBrick src={HorseDrawnTrain} className={styles.ldesktop_brick_img} alt="Horse-Drawn Train" />
+            <HeaderBrick src={BridgeTrainWreck} className={styles.ldesktop_brick_img} alt="Bridge Train Wreck" />
+            <HeaderBrick src={EarlyLocomotive1} className={styles.ldesktop_brick_img} alt="Steam Locomotive around 1900" />
+            <HeaderBrick src={EarlyLocomotive2} className={styles.ldesktop_brick_img} alt="Steam Locomotive around 1905" />
+
+
           </div>
-          <Navbar />
+        </div>
 
       </div>
-
-
-
-      <div className={styles.header_img_box}>
-        {/* <div className={styles.header_anim}> */}
-
-
-            <div className={styles.tech_slideshow}>
-              <div className={styles.mover_1}>
-
-                <div className={styles.grid_test_grid}>
-                    
-                    <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
-                    <HeaderBrick src={Calypso} alt="Wreck of the Calypso" />
-                    <HeaderBrick src={JohnFitch} alt="First Steamboat 1789" />
-                    <HeaderBrick src={CharleyPatton} alt="Charley Patton" />
-                    <HeaderBrick src={Bales} alt="9226 Bales of Cotton" />
-                    <HeaderBrick src={LoadingRiverboats} alt="Loading Riverboats on the Mississippi" />
-                    
-                    
-                    <HeaderBrick src={RiverboatDisaster} alt="Mississippi Riverboat Disaster" />
-                    <HeaderBrick src={GreenvilleTogether} alt="Greenville Mississippi Flood" />
-
-
-
-                    <HeaderBrick src={SonHouse} alt="Son House" />
-                    <HeaderBrick src={HorseDrawnTrain} alt="Horse-Drawn Train" />
-                    <HeaderBrick src={BridgeTrainWreck} alt="Bridge Train Wreck" />
-                    <HeaderBrick src={EarlyLocomotive1} alt="Steam Locomotive around 1900" />
-                    <HeaderBrick src={EarlyLocomotive2} alt="Steam Locomotive around 1905" />
-                    <HeaderBrick src={LayingRails} alt="Laying Rails" />
-                    <HeaderBrick src={SouthMoorWreck} alt="South Moor Wreck" />
-                    <HeaderBrick src={FastestSteamLoc} alt="Fastest Steam Locomotive" />
-                    <HeaderBrick src={SkipJames} alt="Skip James" />
-                    <HeaderBrick src={CarBridgeWreck} alt="Early Car Wreck on Bridge" />
-                    <HeaderBrick src={EdisonElectricCar} alt="Edison Electric Car" />
-                    <HeaderBrick src={FlattenedWheels} alt="Car Wreck With Flattened Wheels" />
-                    <HeaderBrick src={TrouveTricycle} alt="Trouve Electric Tricycle" />
-                    <HeaderBrick src={FordFirstCar} alt="Henry Ford's First Car" />
-                    <HeaderBrick src={WallaceElectricCar} alt="Wallace Electric Car" />
-                    <HeaderBrick src={DrivingFashion} alt="Early Driving Fashion" />
-                    <HeaderBrick src={BukkaWhite} alt="Bukka White" />
-                    <HeaderBrick src={BoeingFirst} alt="Boeing First Commercial Flight" />
-                    <HeaderBrick src={DorandTriplane} alt="Dorand Triplane 1908" />
-                    <HeaderBrick src={Hindenberg} alt="Hindenberg Disaster 1937" />
-                    <HeaderBrick src={KatherineStinson} alt="Katherine Stinson 1913" />
-                    <HeaderBrick src={PompeienPiraud} alt="Pompeien-Piraud Airship" />
-                    <HeaderBrick src={MuddyWaters} alt="Muddy Waters" />
-                    <HeaderBrick src={ConvairFlyingCar} alt="Convair Flying Car" />
-                    <HeaderBrick src={Dequevillay} alt="D'Equevillay Flying Machine 1908" />
-                    <HeaderBrick src={WrightBros} alt="Wright Brothers 1902" />
-
-
-
-                    <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
-                    <HeaderBrick src={Calypso} alt="Wreck of the Calypso" />
-                    <HeaderBrick src={JohnFitch} alt="First Steamboat 1789" />
-                    <HeaderBrick src={CharleyPatton} alt="Charley Patton" />
-                    <HeaderBrick src={Bales} alt="9226 Bales of Cotton" />
-                    <HeaderBrick src={LoadingRiverboats} alt="Loading Riverboats on the Mississippi" />
-                    <HeaderBrick src={RiverboatDisaster} alt="Mississippi Riverboat Disaster" />
-
-                </div>
-
-
-              </div>
-            </div>
-
-
-
-
-            {/* <div className={styles.grid_test_grid}>
-              
-              <HeaderBrick src={RobertJohnson} alt="Robert Johnson" />
-              <HeaderBrick src={LeveeBreach} alt="Mississippi Levee Breach 1927" />
-              <HeaderBrick src={Bales} alt="9226 Bales of Cotton" />
-              <HeaderBrick src={Calypso} alt="Wreck of the Calypso" />
-              <HeaderBrick src={JohnFitch} alt="First Steamboat 1789" />
-              <HeaderBrick src={CharleyPatton} alt="Charley Patton" />
-              <HeaderBrick src={LoadingRiverboats} alt="Loading Riverboats on the Mississippi" />
-              <HeaderBrick src={RiverboatDisaster} alt="Mississippi Riverboat Disaster" />
-              <HeaderBrick src={GreenvilleTogether} alt="Greenville Mississippi Flood" />
-              <HeaderBrick src={SonHouse} alt="Son House" />
-              <HeaderBrick src={HorseDrawnTrain} alt="Horse-Drawn Train" />
-              <HeaderBrick src={BridgeTrainWreck} alt="Bridge Train Wreck" />
-              <HeaderBrick src={EarlyLocomotive1} alt="Steam Locomotive around 1900" />
-              <HeaderBrick src={EarlyLocomotive2} alt="Steam Locomotive around 1905" />
-              <HeaderBrick src={LayingRails} alt="Laying Rails" />
-              <HeaderBrick src={SouthMoorWreck} alt="South Moor Wreck" />
-              <HeaderBrick src={FastestSteamLoc} alt="Fastest Steam Locomotive" />
-              <HeaderBrick src={SkipJames} alt="Skip James" />
-              <HeaderBrick src={CarBridgeWreck} alt="Early Car Wreck on Bridge" />
-              <HeaderBrick src={EdisonElectricCar} alt="Edison Electric Car" />
-              <HeaderBrick src={FlattenedWheels} alt="Car Wreck With Flattened Wheels" />
-              <HeaderBrick src={TrouveTricycle} alt="Trouve Electric Tricycle" />
-              <HeaderBrick src={FordFirstCar} alt="Henry Ford's First Car" />
-              <HeaderBrick src={WallaceElectricCar} alt="Wallace Electric Car" />
-              <HeaderBrick src={DrivingFashion} alt="Early Driving Fashion" />
-              <HeaderBrick src={BukkaWhite} alt="Bukka White" />
-              <HeaderBrick src={BoeingFirst} alt="Boeing First Commercial Flight" />
-              <HeaderBrick src={DorandTriplane} alt="Dorand Triplane 1908" />
-              <HeaderBrick src={Hindenberg} alt="Hindenberg Disaster 1937" />
-              <HeaderBrick src={KatherineStinson} alt="Katherine Stinson 1913" />
-              <HeaderBrick src={PompeienPiraud} alt="Pompeien-Piraud Airship" />
-              <HeaderBrick src={MuddyWaters} alt="Muddy Waters" />
-              <HeaderBrick src={ConvairFlyingCar} alt="Convair Flying Car" />
-              <HeaderBrick src={Dequevillay} alt="D'Equevillay Flying Machine 1908" />
-              <HeaderBrick src={WrightBros} alt="Wright Brothers 1902" />
-
-
-
-
-
-
-            </div> */}
-
-        {/* </div> */}
-      </div>
-      {/* <div className={styles.bottom_bar}>
-
-      </div> */}
     </div>
   )
 }

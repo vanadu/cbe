@@ -81,14 +81,10 @@ export default function Header() {
               </li>
             </ul>
           </div>
-
-
-          
         </section>
 
         
         <section className={styles.desktop_menu}>
-
           <ul className={styles.desktop_menu_list}>
             <li className={styles.desktop_menu_list_item}>
               <Link

@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import * as styles from '../styles/Header.module.scss'
 
-const HeaderBrick = ({src, alt}) => {
+const HeaderBrick = ({src, className, alt}) => {
 
   return (
     <>
@@ -11,7 +11,7 @@ const HeaderBrick = ({src, alt}) => {
         src={src} 
         width="0"
         height="0"
-        className={styles.brick_img} alt={alt} 
+        className={className} alt={alt} 
       />
     </>
   )
