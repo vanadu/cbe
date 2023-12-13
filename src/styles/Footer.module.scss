@@ -4,7 +4,10 @@
 @import './mixins/mediaqueries.scss';
 
 .footer {
-  padding: 0 .5rem;
+  @include desktop {
+    padding: 0 2rem 1.5rem;
+  }
+  padding: 0 .5rem 1.5rem;
   background-color: $primary_color;
 }
 
@@ -12,35 +15,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .footer_branding_img {
   @include mphone {
-    width: 320px; 
+    // width: 320px; 
   }
   @include lphone {
-    width: 380px;
+    width: 90%;
+
   }
   @include tablet {
-    width: 460px;
+    width: 420px;
   }
   @include desktop {
-  
+    width: 460px;
   }
   @include ldesktop {
-  
+    width: 460px;
   }
-  width: 280px;
+  width: 92%;
   height: auto;
+  padding: 1.5rem 0 1rem;
 }
 
 .footer_text {
   @include mphone {
     font-size: .875rem;
+    line-height: 1.25rem;
   }
   @include lphone {
     font-size: .938rem;
+    line-height: 1.313rem;
+  }
+  @include tablet {
+    font-size: 1rem;
+    line-height: 1.313rem;
+  }
+  @include desktop {
+    font-size: 1.063rem;
+    line-height: 1.5rem;
   }
   color: $light_text_color;
   padding: .25rem 0;

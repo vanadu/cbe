@@ -43,7 +43,16 @@ function Home() {
             >
             <SeparatorDots />
             <p className={styles.content_text}>About 100 years ago, a handful of musicians from the most disadvantaged region in America created a sound that changed the course of popular music all over the world.</p>
+
             <div  className={styles.flex_center}>
+              <div className={styles.youtube_embed}>
+
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3v312lWTSrs?si=oPzOZ8sMLUUVBxAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+
+
+            {/* <div  className={styles.flex_center}>
               <figure className={styles.figure_full_width}>
                 <div className={styles.grid_bluesmen}>
                   <hr className={styles.grid_bluesmen_rule} />
@@ -112,12 +121,12 @@ function Home() {
                   <hr className={styles.grid_bluesmen_rule} />
                 </div>
               </figure>
-            </div>
+            </div> */}
             {/* <p className={styles.content_text}>
               From early rock and roll, to the Beatles and the British invasion, to the Woodstock generation, to what&rsquo;s now known as &lsquo;classic rock&rsquo; &mdash; if it hadn&rsquo;t been for Mississippi Delta blues, popular music of the late 20th century as we know it may never have come to pass. 
             </p> */}
             <p className={styles.content_text}>
-              Crossroads Blues Experience celebrates the pre-electric roots of the blues and highlights the promise of America where, no matter what your heritage or background, you can touch people&rsquo;s lives in a positive way and make the world a better place.
+            <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> celebrates the pre-electric roots of the blues and highlights the promise of America where, no matter what your heritage or background, you can touch people&rsquo;s lives in a positive way and make the world a better place.
             </p>
           </Expander> 
 
@@ -134,7 +143,17 @@ function Home() {
             <p className={styles.content_text}>
               Everything has a story, be it boats or trains or blues music &mdash; or even things we take for granted like shoes &mdash; but the amazing thing about all these stories is that they&rsquo;re all interconnected.
             </p>
-            <div className={styles.flex_center}>
+
+            <div  className={styles.flex_center}>
+              <div className={styles.youtube_embed}>
+
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LHHfBZQEHjU?si=rjIkfUtXyIR_tbnF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+
+
+
+            {/* <div className={styles.flex_center}>
               <figure className={styles.figure_full_width}>
                 <hr className={styles.grid_bluesmen_rule} />
                 <Image 
@@ -148,7 +167,7 @@ function Home() {
                 <hr className={styles.grid_bluesmen_rule} />
                 <figcaption>Songs of Five Eras</figcaption>
               </figure>
-            </div>
+            </div> */}
             <p className={styles.content_text}>
               Our project takes five iconic American songs that reflect a mode of transportation, each of which represents an era. We illustrate the progression of these eras in a series of images, each of which tells a story. And all of these images together form a context. The result is image-based, connect-the-dots storytelling that helps the audience conceptualize events into that larger chronology we call <span className={styles.semibold_italic}>history</span>. 
             </p>
@@ -170,20 +189,14 @@ function Home() {
             </p>
 
 
-              <div className={styles.figure_educate}>
-
-              <figure className={styles.figure_full_width}>
-              <Image 
-                src={EngageGif} 
-                width="0"
-                height="0"
-                sizes="100vw"
-                // style={{ width: '100%', height: 'auto' }}
-                className={styles.figure_home_gif_image} alt="Multiple Engagement Streams" 
-              />
-            </figure>
-
+            <div  className={styles.flex_center}>
+              <div className={styles.youtube_embed}>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MUJDVtsBn9o?si=xiI_jdspYJoAIO__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
+            </div>
+
+
+
 
             <p className={styles.content_text}>
               The objective is for participants to focus on whichever stream captures their attention and imagination most at any given moment while still engaging with &mdash; and learning from &mdash; the other streams. 

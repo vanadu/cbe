@@ -25,9 +25,9 @@ const Program = () => {
           <p className={styles.content_text}>
           <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> fills a need for parents, grandparents, guardians &mdash; or even siblings &mdash; to experience live music together in a safe, moderate-volume environment with a program that crosses generational and cultural divides and educates as well as entertains.
           </p>
-          <h2 className={styles.program_heading}>Why Blues Music?</h2>
+          <h2 className={styles.program_heading}>Blues is History</h2>
           <p className={styles.content_text}>
-            Before electric guitars and amplification, people of the South were using whatever instruments they could get their hands on to create and play music.
+            Most people associate blues music with gritty vocals and full bands with electric instruments and drums. But before the invention of electric instruments, the people of the South were using whatever instruments they could get their hands on to imprint their own experience and history on their music.
           </p>
           <div className={styles.flex_center}>
             <figure className={styles.figure_two_up}>
@@ -39,6 +39,7 @@ const Program = () => {
                 // style={{ width: '100%', height: 'auto' }}
                 className={styles.figure_two_up_image} alt="Acme Guitars" 
               />
+              /
               <Image 
                 src={HohnerHarps} 
                 width="0"
@@ -62,17 +63,17 @@ const Program = () => {
             Our Mission
           </h2>
           <p className={styles.content_text}>
-            Our mission is to inspire, educate and engage students with a multimedia experience interweaving live music, geography, social studies, and history based on the narrative of the origins of blues music in the Mississippi Delta. Founded on the concept of the Crossroads as intersection point between cultures and backgrounds, the Crossroads Blues Experience aims to empower young people to achieve their innate potential.
+            Our mission is to inspire, educate and engage students with a multimedia experience interweaving live music, geography, social studies, and history based on the narrative of the origins of blues music in the Mississippi Delta. Founded on the concept of the Crossroads as intersection point between cultures and backgrounds, <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> aims to empower young people to achieve their innate potential.
           </p>
 
           <h2 className={styles.program_heading}>
             Supporting CBE
           </h2>
           <p className={styles.content_text}>
-            To bring Crossroads Blues Experience to your school, church or venue, or to learn how you can support us in bringing our innovative, inspirational program to financially-challenged public schools, go to the Contact page.  
+            To bring <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> to your school, church or venue, or to learn how you can support us in bringing our innovative, inspirational program to financially-challenged public schools, go to the Contact page.  
           </p>
           <p className={styles.content_text}>
-            Thanks for supporting the Crossroads Blues Experience.
+            Thanks for supporting <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span>.
           </p>
         </div>
       </section>
