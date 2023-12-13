@@ -424,13 +424,21 @@ figure-o-loaded-or-not-ithink-it-score > {
     animation: lDesktopMoveSlideshow 360s linear infinite;
   }
   display: flex;
+  justify-content: flex-start;
   position: absolute;
   height: auto;
   // !VA 2023.12.05 Didn't work
+  // !VA 2023.12.13
+  visibility: visible !important;
+  opacity: 1 !important;
   height: 64px;
   height: 100%;
+  // width: 100%;
+
   transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 240s linear infinite;
+  animation: moveSlideshow 40s linear infinite;
+  background: rgba(255, 0, 0, .3) !important; //devred
+  border: 2px solid black;
 }
 
 // !VA Stop animation on hover
@@ -467,6 +475,8 @@ figure-o-loaded-or-not-ithink-it-score > {
   height: 100%;
   // !VA Exposes the primary_accent_color background of the parent
   padding: 2px .125rem 2px 0;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .ldesktop_brick_img {
