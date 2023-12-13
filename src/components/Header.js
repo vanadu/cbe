@@ -145,7 +145,6 @@ const Header = () => {
             <HeaderBrick src={EarlyLocomotive1} className={styles.ldesktop_brick_img} alt="Steam Locomotive around 1900" />
             <HeaderBrick src={EarlyLocomotive2} className={styles.ldesktop_brick_img} alt="Steam Locomotive around 1905" />
 
-
           </div>
         </div>
 

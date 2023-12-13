@@ -406,11 +406,9 @@ figure-o-loaded-or-not-ithink-it-score > {
   // transform: translate3d(0, 0, 0);
   // overflow: hidden;
   display: block;
-  @include ldesktop {
-    // width: 8600px;
+  height: 100%;
+    z-index: -1;
   }
-  background: rgba(0, 0, 255, .3) !important; //devblue
-}
 
 
 .bricks_slider .bricks {
@@ -429,16 +427,13 @@ figure-o-loaded-or-not-ithink-it-score > {
   height: auto;
   // !VA 2023.12.05 Didn't work
   // !VA 2023.12.13
-  visibility: visible !important;
-  opacity: 1 !important;
-  height: 64px;
+  // visibility: visible !important;
+  // opacity: 1 !important;
+  // height: 64px;
   height: 100%;
-  // width: 100%;
-
   transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 40s linear infinite;
-  background: rgba(255, 0, 0, .3) !important; //devred
-  border: 2px solid black;
+  animation: moveSlideshow 240s linear infinite;
+  z-index: 10;
 }
 
 // !VA Stop animation on hover
@@ -469,14 +464,12 @@ figure-o-loaded-or-not-ithink-it-score > {
 
 // !VA 2023.12.02 brick_img is in the Brick component
 .brick_img {
-  display: block;
   width: auto;
   // !VA Height is defined in bricks_container
   height: 100%;
   // !VA Exposes the primary_accent_color background of the parent
   padding: 2px .125rem 2px 0;
-  visibility: visible !important;
-  opacity: 1 !important;
+  z-index: -1;
 }
 
 .ldesktop_brick_img {

@@ -9,8 +9,16 @@ const HeaderBrick = ({src, className, alt}) => {
     <>
       <Image 
         src={src} 
+        // width="300"
+        // height="200"
         width="0"
         height="0"
+        // !VA This fixed the no-load problem on iOS!!!!!
+        loading="eager"
+        priority={true}
+
+        // sizes="100vw"
+        // style={{ width: '100%', height: 'auto' }}
         className={className} alt={alt} 
       />
     </>
