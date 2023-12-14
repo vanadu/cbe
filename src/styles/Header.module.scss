@@ -151,15 +151,15 @@ figure-o-loaded-or-not-ithink-it-score > {
       width: 50px;
     }
     @include tablet {
-      width: 380px;
-      padding: .5rem 1rem 0 0;
+      width: 400px;
+      padding: .563rem 1rem 0 0;
     }
     @include desktop {
-      width: 440px;
-      padding: .5rem 1.5rem 0 0;
+      width: 480px;
+      padding: .625rem 1.5rem 0 0;
     }
     @include ldesktop {
-      width: 500px;
+      width: 560px;
       padding: .5rem 1rem 0 0;
     }
   display: block;
@@ -289,12 +289,15 @@ figure-o-loaded-or-not-ithink-it-score > {
 .desktop_menu_list_item a {
   @include tablet {
     font-size: 1.188rem;
+    line-height: 1.438rem;
   }
   @include desktop {
-    font-size: 1.575rem;
+    font-size: 1.438rem;
+    line-height: 1.75rem;
   }
   @include ldesktop {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
+    line-height: 2rem;
   }
   font-family: $secondary_font;
   font-size: 1.313rem;

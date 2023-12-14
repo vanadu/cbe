@@ -69,6 +69,12 @@ export default function Header() {
               </li>
               <li className={styles.mobile_menu_list_item}>
                 <Link 
+                href='/watch'
+                onClick={() => setIsNavOpen(false)}
+                >WATCH</Link>
+              </li>
+              <li className={styles.mobile_menu_list_item}>
+                <Link 
                 href='/about'
                 onClick={() => setIsNavOpen(false)}
                 >ABOUT</Link>
@@ -98,6 +104,13 @@ export default function Header() {
                 href='/program'
                 className={styles.nav_link}>
                 program
+              </Link>
+            </li>
+            <li className={styles.desktop_menu_list_item}>
+              <Link
+                href='/watch'
+                className={styles.nav_link}>
+                watch
               </Link>
             </li>
             <li className={styles.desktop_menu_list_item}>

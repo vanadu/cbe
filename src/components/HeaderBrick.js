@@ -16,7 +16,6 @@ const HeaderBrick = ({src, className, alt}) => {
         // !VA This fixed the no-load problem on iOS!!!!!
         loading="eager"
         priority={true}
-
         // sizes="100vw"
         // style={{ width: '100%', height: 'auto' }}
         className={className} alt={alt} 
