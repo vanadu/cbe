@@ -50,7 +50,7 @@ function Home() {
               <SeparatorDots />
               <p className={styles.content_text}>About 100 years ago, a handful of musicians from the most disadvantaged region in America created a sound that changed the course of popular music all over the world.</p>
 
-              <div  className={styles.flex_center}>
+              <div className={styles.flex_center}>
 
                 <motion.div
                   initial={{ opacity: 0 }}
