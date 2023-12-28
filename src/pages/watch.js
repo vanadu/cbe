@@ -17,12 +17,12 @@ const Watch = () => {
             >
 
           <div className={styles.home_content}>
-            <div className={styles.program_head}>
-              <h1 className={styles.program_head_branding}><span className={styles.secondary_color}>crossroads</span> blues <span className={styles.secondary_color}>experience</span></h1>
-              <h2 className={styles.program_head_slug}>inspire&nbsp;&bull;&nbsp;educate&nbsp;&bull;&nbsp;engage</h2>
-              <hr className={styles.program_head_rule}/>
+            <div className={styles.page_head}>
+              <h1 className={styles.page_head_branding}><span className={styles.secondary_color}>crossroads</span> blues <span className={styles.secondary_color}>experience</span></h1>
+              <h2 className={styles.page_head_slug}>inspire&nbsp;&bull;&nbsp;educate&nbsp;&bull;&nbsp;engage</h2>
+              <hr className={styles.page_head_rule}/>
             </div>
-            <h2 className={styles.program_heading}>Things You Can Do If You&rsquo;re You</h2>
+            <h2 className={styles.page_heading}>Things You Can Do If You&rsquo;re You</h2>
             <p className={styles.content_text}>
               The <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> program opens with the inspirational story of how the music of the Mississippi Delta grew to have an enormous influence on the popular music of the late 20th century and beyond.
             </p>

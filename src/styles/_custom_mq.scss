@@ -445,7 +445,7 @@ nav {
 
 
 
-.contact_form {
+.contact_ {
   @include lphone {
     margin: 0 2rem;
   }
@@ -463,7 +463,7 @@ nav {
   }
 }
 
-.contact_form_title {
+.contact_title {
   @include tablet {
     margin: 8rem 0 3rem;
   }
@@ -475,7 +475,7 @@ nav {
   }
 }
 
-.contact_form_title_text {
+.contact_title_text {
   @include tablet {
     margin-top: 3rem;
     font-size: 2rem;
@@ -490,13 +490,13 @@ nav {
   }
 }
 
-.contact_form--feedback-text {
+.contact_--feedback-text {
   display: inline-block;
   margin: 5rem 0 1rem;
 }
 
 
-.contact_form_input  {
+.contact_input  {
   @include tablet {
     width: 100%;
     margin-bottom: 2rem;
@@ -562,7 +562,7 @@ nav {
   }
 }
 
-.contact_form_button {
+.contact_button {
   width: 140px;
   margin-top: 2rem;
   padding: 1rem 3rem;

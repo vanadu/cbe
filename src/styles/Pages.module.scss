@@ -556,7 +556,7 @@
 
 // !VA PROGRAM PAGE
 
-.program_head {
+.page_head {
   @include tablet {
     margin: 1.5rem 0 1rem;
   }
@@ -579,7 +579,7 @@
   // !VA Not used yet
 }
 
-.program_head_branding {
+.page_head_branding {
   @include mphone {
     font-size: 1.375rem;
     line-height: 1.5rem;
@@ -608,7 +608,7 @@
   line-height: 1.375rem;
 }
 
-.program_head_slug {
+.page_head_slug {
   @include mphone {
     font-size: 1.063rem;
     line-height: 1.375rem;
@@ -644,7 +644,7 @@
   letter-spacing: .17rem;
 }
 
-.program_head_rule {
+.page_head_rule {
   @include mphone {
     width: 90%;
   }
@@ -670,7 +670,7 @@
   opacity: .3;
 }
 
-.program_heading {
+.page_heading {
   @include mphone {
     margin: 1rem 0 .25rem;
     font-size: 1.125rem;
@@ -709,17 +709,20 @@
 }
 
 // !VA Contact form
-.contact_form {
+.contact {
+  @include mphone {
+    padding: 0 .25rem;
+  }
   @include lphone {
-    margin: 0 2rem;
+    padding: 0 .5rem;
   }
   @include tablet {
     margin: 0 auto;
-    width: 500px;
+    width: 700px;
   }
   @include desktop {
     margin: 0 auto;
-    width: 700px;
+    width: 800px;
   }
   @include ldesktop {
     margin: 0 auto;
@@ -729,196 +732,218 @@
   margin: 0;
 }
 
-.contact_form_head {
+.contact_head {
   @include tablet {
-    margin: 8rem 0 3rem;
+    margin: .5rem 0 2rem;
   }
   @include desktop {
-    margin: 8rem 0 3rem;
+    margin: .75rem 0 2rem;
   }
   @include ldesktop {
-    margin: 14rem 0 3rem;
+    margin: 1rem 0 2rem;
   }
 }
 
-.contact_form_head_heading {
+.contact_head_heading {
+  @include mphone {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  @include lphone {
+    font-size: 1.188rem;
+    line-height: 1.428rem;
+  }
   @include tablet {
-    margin-top: 3rem;
-    font-size: 2rem;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
   @include desktop {
-    margin-top: 2rem;
-    font-size: 2rem;
+    margin-top: .5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
   @include ldesktop {
-    margin-top: 2drem;
-    font-size: 2rem;
+    margin: .5rem 0;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
   }
+  padding: 0 0 .25rem;
   font-family: $secondary_font;
   color: $primary_color;
-
   font-size: 1.063rem;
+  line-height: 1.313rem;
   text-align: center;
   // text-decoration: underline;
 }
 
-.content_form_head_text {
+.contact_head_text {
+  @include mphone {
+    font-size: 1rem;
+    line-height: 1.313rem;
+  }
+  @include lphone {
+    font-size: 1.063rem;
+    line-height: 1.313rem;
+  }
+  @include tablet {
+    font-size: 1.125rem;
+    line-height: 1.438rem;
+  }
+  @include desktop {
+    font-size: 1.188rem;
+    line-height: 1.5rem;
+  }
+  @include ldesktop {
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+  }
   font-family: $primary_font;
-  font-size: 1rem;
-  line-height: 1.313rem;
+  font-size: .938rem;
+  line-height: 1.25rem;
   // font-size: 1rem;
 }
 
-.contact_form_feedback_text {
+.contact_feedback_text {
   display: inline-block;
   margin: 5rem 0 1rem;
 }
 
+.contact_info {
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include ldesktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-.contact_form_input  {
-  // @include tablet {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1rem;
-  //     line-height: 1.5rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     margin: 0;
-  //     padding: 0;
-  //     display: inline;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
-  // @include desktop {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1.25rem;
-  //     line-height: 1.75rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     margin: 0;
-  //     padding: 0;
-  //     display: inline;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
-  // @include ldesktop {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1.25rem;
-  //     line-height: 1.75rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     display: inline;
-  //     margin: 0;
-  //     padding: 0;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
+
+.contact_input  {
+  @include tablet {
+    width: 340px;
+  }
+  @include desktop {
+    width: 390px;
+  }
+  @include ldesktop {
+    width: 440px;
+  }
   width: 100%;
   margin-bottom: 2rem;
-  background: rgba(255, 0, 0, .3) !important; //devred
+  margin: .5rem 0;
 }
 
-.contact_form_input_label {
-  // @include tablet {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1rem;
-  //     line-height: 1.5rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     margin: 0;
-  //     padding: 0;
-  //     display: inline;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
-  // @include desktop {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1.25rem;
-  //     line-height: 1.75rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     margin: 0;
-  //     padding: 0;
-  //     display: inline;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
-  // @include ldesktop {
-  //   width: 100%;
-  //   margin-bottom: 2rem;
-  //   label, input {
-  //     font-size: 1.25rem;
-  //     line-height: 1.75rem;
-  //   }
-  //   label {
-  //     display: inline;
-  //     padding-right: .5rem;
-  //   }
-  //   input {
-  //     display: inline;
-  //     margin: 0;
-  //     padding: 0;
-  //   }
-  //   textarea {
-  //     width: 100%;
-  //     height: 140px;
-  //   }
-  // }
+.contact_input_label {
+  @include mphone {
+    font-size: .938rem;
+    line-height: 1.25rem;
+  }
+  @include lphone {
+    font-size: 1rem;
+    line-height: 1.313rem;
+  }
+  @include tablet {
+    font-size: 1.125rem;
+    line-height: 1.438rem;
+  }
+  @include desktop {
+    font-size: 1.188rem;
+    line-height: 1.5rem;
+  }
+  @include ldesktop {
+    font-size: 1.25rem;
+    line-height: 1.575rem;
+  }
   display: block;
-  // background: rgba(0, 0, 255, .3) !important; //devblue
-
+  width: 100%;
+  margin-bottom: .063rem;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
 }
 
-.contact_form_button {
+.contact_message {
+  width: 100%;
+}
+
+.contact_input_text, .contact_message_text {
+  @include mphone {
+    font-size: .938rem;
+    line-height: 1.25rem;
+  }
+  @include lphone {
+    font-size: 1rem;
+    line-height: 1.313rem;
+  }
+  @include tablet {
+    font-size: 1.125rem;
+    line-height: 1.438rem;
+  }
+  @include desktop {
+    font-size: 1.188rem;
+    line-height: 1.5rem;
+  }
+  @include ldesktop {
+    font-size: 1.25rem;
+    line-height: 1.575rem;
+  }
+  width: 100%;
+  display: block;
+  color: $form_text_color;
+  font-size: 1rem;
+  line-height: 1.313rem;
+  background: $tertiary_accent_color;
+  // pointer-events: none;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid $secondary_accent_color;
+  border-radius: 3px;
+}
+
+.contact_message_text {
+  @include mphone {
+    height: 100px;
+  }
+  @include lphone {
+    height: 110px;
+  }
+  @include tablet {
+    height: 120px;
+  }
+  @include desktop {
+    height: 140px
+  }
+  @include lphone {
+    height: 160px
+  }
+  height: 80px;
+}
+
+.contact_input_text:focus, .contact_message_text {
+  outline: none;
+  text-shadow: 0 0 1px #959595, 0 0 1px #959595;
+}
+
+.contact_button {
   width: 140px;
+  display: block;
   margin-top: 2rem;
+  margin: 2rem auto;
   padding: 1rem 3rem;
   background: rgb(30 58 138);
   color: #FFF;
+  font-family: $secondary_font;
+  font-size: 1rem;
+  letter-spacing: .05rem;
 }
 
 
