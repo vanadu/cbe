@@ -72,7 +72,7 @@ export const Contact = () => {
           <div className={styles.contact_head}>
             <h2 className={styles.contact_head_heading}>Contact Us</h2>
             <p className={styles.contact_head_text}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio impedit, cum quo pariatur nisi vel praesentium totam, iusto hic culpa iste molestias sint aspernatur! 
+              Our program is the perfect complement for your school or church &mdash; or any other venue that brings adults and kids together. To find out more about <span className={styles.semibold}>Crossroads Blues Experience</span>, please feel free to send us a message. 
             </p>
           </div>
           <div className={styles.contact_feedback}>
