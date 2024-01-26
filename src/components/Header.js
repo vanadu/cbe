@@ -4,7 +4,7 @@ import Link from 'next/link'
 import CBEHeaderBrandingMobile from '../../public/images/img-cbe-branding-mobile.png'
 import CBEHeaderBrandingDesktop from '../../public/images/img-cbe-branding-desktop.png'
 import { motion } from 'framer-motion'
-
+import IconBar from '../components/IconBar'
 import headerimg from '../../public/images/img-header.png'
 import HeaderBrick from '../components/HeaderBrick'
 
@@ -63,9 +63,6 @@ const Header = () => {
       transition={{ duration: .5, delay: .25 }}
     >
       <div className={styles.header}>
-
-
-
           <div className={styles.top_bar}>
 
             <div className={styles.branding}>
@@ -93,8 +90,8 @@ const Header = () => {
                   />
               </Link>
             </div>
+            <IconBar />
             <Navbar />
-
           </div>
 
 
@@ -169,9 +166,9 @@ const Header = () => {
 
         </div>
       </div>
-
     </motion.div>
   )
 }
+
 
 export default Header

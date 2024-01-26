@@ -478,3 +478,84 @@ figure-o-loaded-or-not-ithink-it-score > {
 .ldesktop_brick_img {
   display: none;
 }
+
+// !VA IconBar
+.icons {
+  @include lphone {
+    top: -.5rem;
+    right: 5rem;
+  }
+  @include tablet {
+    top: 2.25rem;
+    right: .75rem;
+  }
+  @include desktop {
+    top: 2.75rem;
+    right: .5rem;
+  }
+  @include ldesktop {
+    top: 4.5rem;
+    right: 2.25rem;
+  }
+  position: absolute;
+  top: 1rem;
+  right: 4.5rem;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+.icon {
+    @include mphone {
+      // padding: 0 .75rem;
+      font-size: 2.5rem;
+    }
+    @include lphone {
+      font-size: 2.75rem;
+      padding: 1.75rem 1rem 0;
+    }
+    @include tablet {
+      font-size: 2.5rem;
+      padding: 1rem 1rem 0;
+    }
+    @include desktop {
+      font-size: 3rem;
+      padding: 1rem 1.5rem 0;
+    }
+    @include ldesktop {
+      font-size: 3rem;
+      padding: 0 1.5rem;
+    }
+  font-size: 2.25rem;
+  padding: 0 .625rem;
+  color: $secondary_color;
+}
+
+// !VA This is the only icon in the icon bar that's a PNG, not a react icon
+.icon img {
+  @include mphone {
+    width: 2.5rem;
+  }
+  @include lphone {
+    width: 2.5rem;
+  }
+  @include tablet {
+    width: 3.25rem;
+  }
+  @include desktop {
+    width: 3.25rem;
+  }
+  @include ldesktop {
+    width: 3.125rem;
+  }
+  margin-top: 5px;
+  width: 2.125rem;
+  height: auto;
+}
+
+
