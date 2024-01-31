@@ -804,9 +804,20 @@
   // font-size: 1rem;
 }
 
+
+.contact_feedback {
+  width: 100%;
+  font-family: $primary_font;
+}
+
+.feedback_success_heading {
+
+  text-align: center;
+}
+
 .contact_feedback_text {
   display: inline-block;
-  margin: 5rem 0 1rem;
+  margin: 1rem 0 1rem;
 }
 
 .contact_info {
