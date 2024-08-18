@@ -115,6 +115,13 @@ export default function Header() {
             </li>
             <li className={styles.desktop_menu_list_item}>
               <Link
+                href='/teach'
+                className={styles.nav_link}>
+                teach
+              </Link>
+            </li>
+            <li className={styles.desktop_menu_list_item}>
+              <Link
                 href='/about'
                 className={styles.nav_link}>
                 

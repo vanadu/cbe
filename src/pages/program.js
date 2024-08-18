@@ -25,16 +25,16 @@ const Program = () => {
               <h2 className={styles.page_head_slug}>inspire&nbsp;&bull;&nbsp;educate&nbsp;&bull;&nbsp;engage</h2>
               <hr className={styles.page_head_rule}/>
             </div>
-            <h2 className={styles.page_heading}>The CBE Program</h2>
+            <h2 className={styles.page_heading}>What is Crossroads Blues Experience?</h2>
             <p className={styles.content_text}>
-              <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is a live performance/multimedia program for people of all ages. Originally conceived as a program for schools, <span className={styles.semibold}>CBE</span> also performs at public venues where all ages can come together to share in the experience of our American story.  
+              <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is a multidimensional ive performance/multimedia educational program for people of all ages. Originally conceived as a program for schools, we also perform at public venues where all ages can come together to share in the experience of our American story.  
             </p>
             <p className={styles.content_text}>
-            <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> fills a need for parents, grandparents, guardians &mdash; or even siblings &mdash; to experience live music together in a safe, moderate-volume environment with a program that crosses generational and cultural divides and educates as well as entertains.
+            Our unique blend of music performanc and image-based storytelling fills a need for parents, grandparents, guardians &mdash; or even siblings &mdash; to experience live music together in a safe, moderate-volume environment with a program that crosses generational and cultural divides and educates as well as entertains.
             </p>
-            <h2 className={styles.page_heading}>Blues is History</h2>
+            <h3 className={styles.page_subheading}>Blues Is American History</h3>
             <p className={styles.content_text}>
-              Most people associate blues music with gritty vocals and full bands with electric instruments and drums. But before the invention of electric instruments, the people of the South were using whatever instruments they could get their hands on to imprint their own experience and history on their music.
+              Most people associate blues music with gritty vocals and full bands with electric instruments and drums. But before the invention of electric instruments, the people of the South were imprinting their own experience and history on their music using two instruments they could carry on their backs or in their pocket &mdash; the acoustic guitar and the harmonica.
             </p>
             <div className={styles.flex_center}>
               <figure className={styles.figure_two_up}>
@@ -61,26 +61,45 @@ const Program = () => {
               From Texas to Appalachia, each region developed a distinct character of the blues. What they all share is a <span className={styles.italic}>feeling</span> that touched people all over the world and is deeply rooted in the American experience.
             </p>
             <p className={styles.content_text}>
-            Blues music speaks to a wide range of people for whom the more complex melodic and harmonic structures of traditional jazz may be perceived as inaccessible. 
-            </p>
-            <p className={styles.content_text}>
-            <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is dedicated to bringing authentic pre&#8209;electric blues music to live audiences so that new generations of Americans can connect with our shared heritage and carry the blues tradition forward.
+            Blues music speaks to a wide range of people for whom the more complex melodic and harmonic structures of traditional jazz may be perceived as inaccessible. <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> is dedicated to bringing authentic Mississippi Delta, Piedmont, and Ragtime Blues music to live audiences so that new generations of Americans can connect with our shared heritage and carry the blues tradition forward.
             </p>
             <h2 className={styles.page_heading}>
               Our Mission
             </h2>
             <p className={styles.content_text}>
-              Our mission is to inspire, educate and engage students with a multimedia experience interweaving live music, geography, social studies, and history based on the narrative of the origins of blues music in the Mississippi Delta. Founded on the concept of the Crossroads as intersection point between cultures and backgrounds, <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> aims to empower young people to achieve their innate potential.
+              Our mission is to inspire, educate and engage students with a multimedia experience interweaving live music, geography, social studies, and history based on the narrative of the origins of blues music in the Mississippi Delta. Founded on the concept of the Crossroads as intersection point between cultures, backgrounds and generations, <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> aims to empower young people to achieve their innate potential.
             </p>
 
             <h2 className={styles.page_heading}>
-              Supporting CBE
+              Program Structure
             </h2>
             <p className={styles.content_text}>
-              To bring <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span> to your school, church or venue, or to learn how you can support us in bringing our innovative, inspirational program to financially-challenged public schools, go to the Contact page.  
+              The Crossroads Blues Experience program performs five iconic American songs, each of which represents mode of transportation associated with an era of American history. Each song is accompanied with a multimedia show that presents the historical progression of the that era: walking, steamboats, trains, automobiles, and air travel. All of these eras experienced a transition nexus sometime around 100 years ago, as blues music was also in its formative years. These overlapping chronologies are reinforced with multimedia imagery as the program progresses through history. 
             </p>
+            <h3 className={styles.page_subheading}>
+              Things You Can Do If You&lsquo;re You
+            </h3>
             <p className={styles.content_text}>
-              Thanks for supporting <span className={styles.semibold}>Crossroads&nbsp;Blues&nbsp;Experience</span>.
+              Our program opens with graphical storybook video that tells the story of how a handful of musicians from the most disadvantaged, underdeveloped region of the country created sound that changed the course of popular music all over the world.  
+            </p>
+            <h3 className={styles.page_subheading}>
+              Walking Blues (Son House) &amp; Backwater Blues (Bessie Smith)
+            </h3>
+            <p className={styles.content_text}>
+              Walking Blues provides the live soundtrack as we lead students through a brief history of photography so they can better understand the images that follow. Then we take a stroll through the Mississippi Delta, the birthplace of blues music, in the days when for most people walking was the only means of transportation available. With Backwater Blues, we introduce our audience to the Great Mississippi Flood of 1927 and some of its far-reaching consequences.   
+            </p>
+
+            <h3 className={styles.page_subheading}>
+              Down By The Riverside (African-American Spiritual)
+            </h3>
+            <p className={styles.content_text}>
+              The Great Mississippi and the Steamboat Era are inextricably linked in our national consciousness. With this song, we begin our journey on the Mississippi and follow the steam engine through its impact on maritime history.
+            </p>
+            <h3 className={styles.page_subheading}>
+              This Train (African-American Spiritual)
+            </h3>
+            <p className={styles.content_text}>
+              The steam locomotive brought about the end of the Riverboat Era. This song takes us  
             </p>
           </div>
 

@@ -151,15 +151,15 @@ figure-o-loaded-or-not-ithink-it-score > {
       width: 50px;
     }
     @include tablet {
-      width: 400px;
+      width: 500px;
       padding: .563rem 1rem 0 0;
     }
     @include desktop {
-      width: 480px;
+      width: 560px;
       padding: .625rem 1.5rem 0 0;
     }
     @include ldesktop {
-      width: 560px;
+      width: 700px;
       padding: .5rem 1rem 0 0;
     }
   display: block;

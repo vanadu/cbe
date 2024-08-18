@@ -704,6 +704,45 @@
   line-height: 1.375rem;
 }
 
+.page_subheading {
+  @include mphone {
+    margin: 1rem 0 .25rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  @include lphone {
+    margin: 1rem 0 .25rem;
+    font-size: 1.188rem;
+    line-height: 1.438rem;
+  }
+  @include tablet {
+    margin: 1.5rem 0 .25rem;
+    font-size: 1.313rem;
+    line-height: 1.438rem;
+  }
+  @include desktop {
+    margin: 1.5rem 0 .25rem;
+    font-size: 1.377rem;
+    line-height: 1.638rem;
+  }
+  @include ldesktop {
+    margin: 2rem 0 .75rem;
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+  }
+  margin: .75rem 0 0;
+  color: $primary_color;
+  font-family: $secondary_font;
+  font-family: $primary_font;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+
+
+
+
+
 .secondary_color {
   color: $secondary_color;
 }

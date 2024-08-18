@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-// import LarParNewsIcon from '/public/icon-larpar-news.png'
+import KentCulturalAlliance from '/public/images/img-kent-cultural-alliance.jpg'
 import { FaFacebookSquare } from 'react-icons/fa'
 // import { FaTwitterSquare } from 'react-icons/fa'
 import { TfiYoutube } from 'react-icons/tfi'
@@ -23,12 +23,12 @@ const IconBar = () => {
           className={styles.icon}>
           <FaHome />
         </Link> */}
-        {/* <Link 
+        <Link 
           href='/blog'
           className={styles.icon} 
           >
-          <Image src={LarParNewsIcon} alt="LarParLife.com" />
-        </Link> */}
+          <Image src={KentCulturalAlliance} alt="LarParLife.com" />
+        </Link>
         {/* <Link 
           href='https://www.youtube.com/channel/UCwHwkfSqDlO6MJejPrxzW0A'
           className={styles.icon} 
