@@ -93,7 +93,9 @@
 
 .figure_full_width {
   @include tablet {
+    width: 550px;
     margin: .75rem 0 .5rem;
+    margin: 1.5rem auto;
   }
   @include desktop {
     margin: .75rem 0 .5rem;
@@ -106,6 +108,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: auto;
   margin: .5rem 0 .25rem;
 }
 
@@ -1082,6 +1085,7 @@
 .showmore_content_block {
   display: block !important;
 }
+
 // !VA Now that the paragraph tag is displayed inline and we have a block-level parent, we can show the showmore-link inline
 .showmore_link {
   @include mphone {
