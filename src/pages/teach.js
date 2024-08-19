@@ -4,6 +4,8 @@ import Link from 'next/link'
 import HeadBrace from '../../public/images/img-head-brace.jpg'
 import { motion } from 'framer-motion'
 
+import ShowMoreContent from '../components/ShowMoreContent'
+
 import * as styles from '../styles/Pages.module.scss'
 
 const Teach = () => {

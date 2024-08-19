@@ -707,41 +707,36 @@
 .page_subheading {
   @include mphone {
     margin: 1rem 0 .25rem;
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: $mphoneSubheadFontSize;
+    line-height: $mphoneSubheadLineHeight;
   }
   @include lphone {
     margin: 1rem 0 .25rem;
-    font-size: 1.188rem;
-    line-height: 1.438rem;
+    font-size: $lphoneSubheadFontSize;
+    line-height: $lphoneSubheadLineHeight;
   }
   @include tablet {
     margin: 1.5rem 0 .25rem;
-    font-size: 1.313rem;
-    line-height: 1.438rem;
+    font-size: $tabletSubheadFontSize;
+    line-height: $tabletSubheadLineHeight;
   }
   @include desktop {
     margin: 1.5rem 0 .25rem;
-    font-size: 1.377rem;
-    line-height: 1.638rem;
+    font-size: $desktopSubheadFontSize;
+    line-height: $desktopSubheadLineHeight;
   }
   @include ldesktop {
     margin: 2rem 0 .75rem;
-    font-size: 1.5rem;
-    line-height: 1.25rem;
+    font-size: $ldesktopSubheadFontSize;
+    line-height: $ldesktopSubheadLineHeight;
   }
   margin: .75rem 0 0;
   color: $primary_color;
   font-family: $secondary_font;
   font-family: $primary_font;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
+  font-size: $rootSubheadFontSize;
+  line-height: $rootSubheadLineHeight;
 }
-
-
-
-
-
 
 .secondary_color {
   color: $secondary_color;
@@ -994,6 +989,341 @@
   font-family: $secondary_font;
   font-size: 1rem;
   letter-spacing: .05rem;
+}
+
+// !VA Showmore/Learnmore styles
+.showmore_container {
+  // !VA Required to show the link on the same line as the text it references
+  display: inline;
+  text-indent: 0;
+  // background: rgba(0, 0, 255, .3) !important; //devblue
+}
+
+
+.showmore {
+  // !VA Not sure if this is used for anything
+  position: relative;
+  // !VA Required to show the link on the same line as the text it references
+  display: inline;
+  text-indent: 0;
+}
+
+.showmore_title {
+  @include mphone {
+    font-size: $mphoneShowmoreFontSize;
+    line-height: $mphoneShowmoreLineHeight;
+  }
+  @include lphone {
+    font-size: $lphoneShowmoreFontSize;
+    line-height: $lphoneShowmoreLineHeight;
+  }
+  @include tablet {
+    font-size: $tabletShowmoreFontSize;
+    line-height: $tabletShowmoreLineHeight;
+  }
+  @include desktop {
+    padding-left: 1.625rem;
+    font-size: $desktopShowmoreFontSize;
+    line-height: $desktopShowmoreLineHeight;
+  }
+  @include ldesktop {
+    padding-left: 1.75rem;
+    font-size: $ldesktopShowmoreFontSize;
+    line-height: $ldesktopShowmoreLineHeight;
+  }
+  display: block;
+  // margin-left: 1rem;
+  // padding-left: 1.313rem;
+  padding: 0 0 .25rem 1.313rem;
+  // text-indent: -1rem;
+  font-size: $rootShowmoreFontSize;
+  line-height: $rootShowmoreLineHeight;
+
+}
+
+.showmore_trigger {
+  // text-indent: 0;
+  // !VA Required to show the link on the same line as the text it references
+  display: inline;
+  // white-space: nowrap;
+
+}
+
+.showmore_content {
+  @include mphone {
+    padding: .25rem 0 0 .313rem;
+  }
+  @include lphone {
+    padding: .25rem 0 0 .313rem;
+  }
+  @include desktop {
+    left: 0;
+    border-left: 4px solid $secondary_accent_color;
+    padding: 0 0 0 .75rem;
+  }
+  @include ldesktop {
+    left: 0;
+    border-left: 5px solid $secondary_accent_color;
+    padding: 0 0 0 .75rem;
+  }
+  // !VA Show the showmore-content inline so it wraps around images. This requires some workarounds wrt spacing, see showmore-content-space
+  display: block;
+  position: relative;
+  left: 0;
+  border-left: 2px solid $secondary_accent_color;
+  padding: 0 0 0 .313rem;
+}
+
+// !VA This is applied to the CHILD for any showmore content. Any content containing the ShowwMoreContent component has to be wrapped in a container DIV with the content_text from the CSS module (i.e. Light.module.css) applied. Inside that container div, we display the paragraph content where the showmore-link will be included inline. 
+// !VA IMPORTANT: In lists, the wrapper div isn't needed because the li serves as the block level parent element
+.showmore_content_inline {
+  display: inline;
+}
+.showmore_content_block {
+  display: block !important;
+}
+// !VA Now that the paragraph tag is displayed inline and we have a block-level parent, we can show the showmore-link inline
+.showmore_link {
+  @include mphone {
+    padding: .25rem 0 0;
+    font-size: $mphoneTextFontSize;
+    line-height: $mphoneTextLineHeight;
+  }
+  @include lphone {
+    padding: .25rem 0 0;
+    font-size: $lphoneTextFontSize;
+    line-height: $lphoneTextLineHeight;
+  }
+  @include tablet {
+    padding: .25rem 0 0;
+    font-size: $tabletTextFontSize;
+    line-height: $tabletTextLineHeight;
+    text-align: left;
+    display: inline-block;
+  }
+  @include desktop {
+    padding: .25rem 0 0;
+    font-size: $desktopTextFontSize;
+    line-height: $desktopTextLineHeight;
+    text-align: left;
+    display: inline-block;
+  }
+  @include ldesktop {
+    padding: .25rem 0 0;
+    font-size: $ldesktopTextFontSize;
+    line-height: $ldesktopTextLineHeight;
+    text-align: left;
+    // display: inline-block;
+  }
+  position: relative;
+  color: $showmore_link_color;
+  font-family: $primary_font;
+  font-size: $rootTextFontSize;
+  line-height: $rootTextLineHeight;
+  font-weight: 700;
+  // !VA Required to show the link on the same line as the text it references
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.showmore_icon {
+  @include mphone {
+    top: 2px;
+    left: 0;
+  }
+  @include lphone {
+    top: 4px;
+    left: 0;
+  }
+  @include tablet {
+    height: 1.625rem;
+    font-size: 1rem;
+    top: 5px;
+    left: 0;
+  }
+  @include desktop {
+    height: 2rem;
+    font-size: 1.063rem;
+    line-height: 1.063rem;
+    top: 5px;
+    left: 0;
+  }
+  @include ldesktop {
+    height: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    top: 5px;
+    left: 0;
+  }
+  display: inline-block;
+  height: 1.75rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+// !VA The showmore-content has to have an inline wrapper so it will display inline and wrap around any images. This requires a utility span class to add line breaks, otherwise the whole content will show as a single inline element with no breaks or white  between paragraphs
+.showmore_content_text, .showmore_content_list {
+  @include tablet {
+    padding: .375rem 0 .5rem;
+  }
+  @include ldesktop {
+    padding: .375rem 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+  }
+  width: 100%;
+  padding: .375rem 0;
+  text-indent: 0;
+  display: inline;
+  p {
+    @include mphone {
+      font-size: $mphoneTextFontSize;
+      line-height: $mphoneTextLineHeight;  
+    }
+    @include lphone {
+      font-size: $lphoneTextFontSize;
+      line-height: $lphoneTextLineHeight;
+    }
+    @include tablet {
+      font-size: $tabletTextFontSize;
+      line-height: $tabletTextLineHeight;
+    }
+    @include desktop {
+      font-size: $desktopTextFontSize;
+      line-height: $desktopTextLineHeight;
+    }
+    @include ldesktop {
+      font-size: $ldesktopTextFontSize;
+      line-height: $ldesktopTextLineHeight;
+    }
+    font-size: $rootTextFontSize;
+    line-height: $rootTextLineHeight;
+    display: inline;
+  }
+}
+
+// !VA Here we set left margin for list elements 
+.showmore_content_text {
+  margin: 0;
+}
+
+.showmore_content_list {
+  // margin: 0 0 0 -1.75rem;
+  // margin-left:  -1.75rem;
+}
+
+// !VA This is the utility span that provides line breaks/whitespace between showmore paragraph content
+.showmore_content_space {
+    @include mphone {
+      padding: 0 0 0 .25rem;
+    }
+    @include lphone {
+      padding: 0 0 0 .25rem;
+    }
+    @include tablet {
+      height: .375rem;
+      padding: 0 0 0 2rem;
+    }
+    @include desktop {
+      height: .5rem;
+    }
+    @include ldesktop {
+      height: .5rem;
+    }
+  display: block;
+  // height: .5rem;
+}
+
+.showmore_figure  {
+  @include mphone {
+    margin: 1rem auto .75rem;
+    max-width: 360px;
+  }
+  @include lphone {
+    margin: 1rem auto .75rem;
+    max-width: 360px;
+  }
+  @include tablet {
+    width: 30%;
+    max-width: 360px;
+    margin: .25rem 1rem 1rem 1rem;
+    // !VA NOW
+    // margin: 0 auto 2rem;
+    float: right;
+  }
+  @include desktop {
+    width: 30%;
+    margin: .5rem 2rem 1rem;
+    float: right;
+  }
+  @include ldesktop {
+    width: 25%;
+    margin: .5rem 3rem 2rem;
+    float: right;
+  }
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  float: none;
+  margin: .5rem auto;
+}
+
+.showmore_figure_image {
+  @include mphone {
+    // Fill this 
+  }
+  @include lphone {
+    // Fill this
+  }
+  @include tablet {
+    width: 100%;
+    border: 4px solid #FFF;
+  }
+  @include desktop {
+    width: 100%;
+    border: 6px solid #FFF;
+  }
+  @include ldesktop {
+    width: 100%;
+    border: 8px solid #FFF;
+  }
+  width: 80%;
+  height: auto;
+  border: 3px solid white;
+}
+
+.showmore_figure_caption {
+  @include mphone {
+    font-size: 1rem;
+  }
+  @include lphone {
+    font-size: 1rem;
+  }
+  @include tablet {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  @include desktop {
+    padding: 0 1rem;
+    font-size: 1.188rem;
+  }
+  @include ldesktop {
+    font-size: 1.125rem;
+    line-height: 1.588rem;
+  }
+  color: $dark_text_color;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  padding: 0 .5rem;
+  text-align: center;
 }
 
 
